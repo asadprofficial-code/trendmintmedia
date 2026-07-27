@@ -8,7 +8,7 @@
   var pages = document.querySelectorAll('.page');
   var navLinksAll = document.querySelectorAll('[data-route]');
   var titles = {
-    home:'TrendMint Media | Celebrity, Entertainment, Business & Tech News',
+    home:'TrendMint Media | Celebrity, Business, Politics & World News',
     about:'About — TrendMint Media',
     services:'Services — TrendMint Media',
     listings:'Latest Stories — TrendMint Media',
@@ -60,7 +60,7 @@
   });
 
   /* ---------- HERO KICKER ROTATOR ---------- */
-  var kickerWords = ['Celebrity','Business','Technology','Lifestyle','Entertainment'];
+  var kickerWords = ['Celebrity','Business','Politics','Sports','World','Entertainment'];
   var ki = 0;
   var kickerEl = document.getElementById('kicker-word');
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -208,8 +208,29 @@ function getFilteredIndexes(){
   form.addEventListener('submit', function(e){
     e.preventDefault();
     if(!form.checkValidity()){ form.reportValidity(); return; }
-    form.classList.add('is-hidden');
-    success.classList.add('is-active');
+
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var originalLabel = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    fetch('/contact.php', { method: 'POST', body: new FormData(form) })
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        if(data.success){
+          form.classList.add('is-hidden');
+          success.classList.add('is-active');
+        } else {
+          alert(data.error || 'Could not send your message. Please try again.');
+        }
+      })
+      .catch(function(){
+        alert('Could not send your message. Please check your connection and try again.');
+      })
+      .finally(function(){
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      });
   });
   document.getElementById('sendAnother').addEventListener('click', function(){
     form.reset();

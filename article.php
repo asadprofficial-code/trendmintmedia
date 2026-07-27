@@ -80,96 +80,8 @@ $articleJson = htmlspecialchars(json_encode($article), ENT_QUOTES, 'UTF-8');
 </script>
 
 <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/article.css">
 <script async src="https://pl30102985.effectivecpmnetwork.com/2e/02/a6/2e02a66c06765e4f5a6c763cd52845a1.js"></script>
-
-<style>
-/* ============================================================
-   ARTICLE-PAGE-SPECIFIC STYLES
-   (site-wide tokens/header/footer come from style.css above —
-   these rules only apply to elements unique to the article page)
-   ============================================================ */
-.announce{background:var(--black);border-bottom:1px solid var(--line);position:relative;overflow:hidden;}
-.announce-inner{max-width:var(--maxw);margin:0 auto;padding:9px 46px;display:flex;align-items:center;justify-content:center;gap:14px;font-size:12.5px;letter-spacing:0.04em;color:var(--grey);text-align:center;}
-.announce-inner strong{color:var(--gold-bright);font-weight:700;}
-.announce-close{position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--grey-dim);width:22px;height:22px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:color .25s,background .25s;}
-.announce-close:hover{color:var(--gold-bright);background:rgba(244,239,226,0.06);}
-.announce-close svg{width:11px;height:11px;}
-@media(max-width:560px){.announce-inner{padding:9px 40px;font-size:11px;line-height:1.4;}}
-
-.article-header{padding:48px 0 32px;border-bottom:1px solid var(--line-soft);}
-.article-header .eyebrow{margin-bottom:16px;}
-.article-header h1{font-size:clamp(24px,6vw,48px);max-width:900px;color:var(--cream);}
-.article-header .art-meta{margin-top:16px;font-size:12.5px;color:var(--grey-dim);letter-spacing:0.05em;}
-@media(max-width:768px){.article-header{padding:28px 0 20px;}}
-
-.article-hero{width:100%;max-height:520px;overflow:hidden;border-bottom:1px solid var(--line-soft);background:#000;}
-.article-hero img{width:100%;height:520px;object-fit:contain;display:block;}
-@media(max-width:768px){.article-hero img{height:230px;}}
-
-.article-layout{display:grid;grid-template-columns:1fr 320px;gap:50px;padding:60px 0 100px;align-items:start;width:100%;}
-@media(max-width:1024px){.article-layout{grid-template-columns:1fr 280px;gap:36px;}}
-@media(max-width:768px){.article-layout{grid-template-columns:1fr;gap:0;padding:36px 0 60px;}}
-
-.article-body p{font-size:17px;line-height:1.85;color:var(--grey);margin-bottom:24px;font-family:var(--sans);overflow-wrap:break-word;word-break:break-word;}
-.article-body p:first-child{font-size:19px;color:var(--cream);font-weight:500;line-height:1.7;}
-@media(max-width:480px){.article-body p{font-size:15.5px;}.article-body p:first-child{font-size:17px;}}
-.article-body h2,.article-body h3{font-family:var(--serif);color:var(--cream);margin:40px 0 16px;font-size:24px;}
-.article-body strong{color:var(--cream);}
-.article-body em{color:var(--gold);font-style:italic;}
-.article-body a{color:var(--gold);border-bottom:1px solid var(--line);transition:color .25s;word-break:break-word;}
-.article-body a:hover{color:var(--gold-bright);}
-.article-divider{border:none;border-top:1px solid var(--line-soft);margin:40px 0;}
-
-.back-bar{display:flex;align-items:center;gap:12px;margin-bottom:32px;}
-.back-bar a{font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--grey);display:inline-flex;align-items:center;gap:8px;transition:color .25s;}
-.back-bar a:hover{color:var(--gold-bright);}
-.back-bar svg{width:14px;height:14px;flex:none;}
-
-.share-row{display:flex;align-items:center;gap:12px;margin-top:48px;padding-top:30px;border-top:1px solid var(--line-soft);flex-wrap:wrap;}
-.share-row span{font-size:11.5px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-dim);}
-.share-btn{width:36px;height:36px;border:1px solid var(--line-soft);display:flex;align-items:center;justify-content:center;color:var(--grey);transition:border-color .3s,color .3s;flex-shrink:0;}
-.share-btn:hover{border-color:var(--gold);color:var(--gold-bright);}
-.share-btn svg{width:15px;height:15px;flex:none;}
-
-.related-section{margin-top:60px;padding-top:40px;border-top:1px solid var(--line-soft);}
-.related-section h3{font-size:20px;margin-bottom:24px;}
-.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-@media(max-width:640px){.related-grid{grid-template-columns:1fr;}}
-.related-card{border:1px solid var(--line-soft);background:rgba(244,239,226,0.015);transition:transform .35s var(--ease),border-color .35s;cursor:pointer;}
-.related-card:hover{transform:translateY(-4px);border-color:var(--line);}
-.related-card img{width:100%;aspect-ratio:16/9;object-fit:cover;}
-.related-card-body{padding:14px 16px 18px;}
-.related-card-body .eyebrow{font-size:10px;margin-bottom:8px;}
-.related-card-body h4{font-size:14px;font-weight:600;line-height:1.35;color:var(--cream);}
-
-.article-sidebar{position:sticky;top:100px;min-width:0;}
-@media(max-width:768px){.article-sidebar{position:static;margin-top:50px;padding-top:40px;border-top:1px solid var(--line-soft);}}
-
-.ad-box{border:1px solid var(--line-soft);background:rgba(244,239,226,0.02);padding:16px;margin-bottom:24px;max-width:100%;overflow:hidden;}
-.ad-box-label{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-dim);margin-bottom:12px;text-align:center;}
-.ad-unit-300x250{width:100%;min-height:250px;background:rgba(244,239,226,0.03);display:flex;align-items:center;justify-content:center;color:var(--grey-dim);font-size:12px;border:1px dashed rgba(201,164,76,0.15);max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
-.ad-unit-300x600{width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
-.ad-box iframe,.in-article-ad iframe,#in-article-ad-slot iframe{max-width:100%;}
-
-.sidebar-trending{margin-bottom:30px;}
-.sidebar-trending h4{font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-dim);margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid var(--line-soft);}
-.trending-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line-soft);cursor:pointer;transition:opacity .25s;}
-.trending-item:hover{opacity:0.75;}
-.trending-item:last-child{border-bottom:none;}
-.trending-num{font-family:var(--serif);font-size:22px;font-weight:300;color:var(--gold-deep);min-width:28px;line-height:1;}
-.trending-item h5{font-size:13px;font-weight:600;line-height:1.4;color:var(--cream);}
-.trending-item span{font-size:11px;color:var(--grey-dim);margin-top:4px;display:block;}
-
-.sidebar-newsletter{border:1px solid var(--line);background:rgba(201,164,76,0.04);padding:22px 18px;margin-top:24px;}
-.sidebar-newsletter h4{font-size:16px;margin-bottom:8px;}
-.sidebar-newsletter p{font-size:13px;color:var(--grey);margin-bottom:16px;}
-.sidebar-newsletter input{width:100%;background:rgba(244,239,226,0.04);border:1px solid var(--line-soft);color:var(--cream);padding:11px 14px;font-size:16px;font-family:var(--sans);margin-bottom:10px;}
-.sidebar-newsletter input:focus{border-color:var(--gold);outline:none;}
-.sidebar-newsletter .btn{width:100%;justify-content:center;font-size:12px;padding:12px;}
-
-.in-article-ad{margin:40px 0;padding:20px;border:1px solid var(--line-soft);background:rgba(244,239,226,0.02);text-align:center;max-width:100%;overflow-x:auto;}
-.in-article-ad .ad-label{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-dim);margin-bottom:10px;}
-</style>
 
 <!-- Article data is now embedded server-side. No fetch/race-condition possible. -->
 <script>
@@ -313,7 +225,7 @@ $articleJson = htmlspecialchars(json_encode($article), ENT_QUOTES, 'UTF-8');
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="/" class="logo"><b>TrendMint</b><span class="logo-dot"></span><span>Media</span></a>
-        <p>Curated celebrity, entertainment, business, and technology coverage — written with editorial care, for readers who are tired of the noise.</p>
+        <p>Curated celebrity, business, politics, sports, and world coverage — written with editorial care, for readers who are tired of the noise.</p>
       </div>
       <div class="footer-col">
         <h5>Quick Links</h5>
