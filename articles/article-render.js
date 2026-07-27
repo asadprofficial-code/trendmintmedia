@@ -5,6 +5,22 @@
   var a = window.CURRENT_ARTICLE;
   if (!a) return; // article.php already redirects home if slug invalid, this is just a safety net
 
+  /* ---- Relative time ("5 min ago", "3 hours ago"...) — script.js isn't loaded on article pages ---- */
+  function timeAgo(iso){
+    if (!iso) return '';
+    var then = new Date(iso).getTime();
+    if (isNaN(then)) return '';
+    var diffSec = Math.floor((Date.now() - then) / 1000);
+    if (diffSec < 60) return 'Just now';
+    var diffMin = Math.floor(diffSec / 60);
+    if (diffMin < 60) return diffMin + ' min ago';
+    var diffHr = Math.floor(diffMin / 60);
+    if (diffHr < 24) return diffHr + (diffHr === 1 ? ' hour ago' : ' hours ago');
+    var diffDay = Math.floor(diffHr / 24);
+    if (diffDay < 7) return diffDay + (diffDay === 1 ? ' day ago' : ' days ago');
+    return new Date(iso).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+  }
+
   /* ---- In-article ad script (must be injected as real <script> tags to execute) ---- */
   var adSlot = document.getElementById('in-article-ad-slot');
   if (adSlot) {
@@ -47,9 +63,15 @@
   fetch(window.ALL_ARTICLES_URL, { cache: 'no-store' })
     .then(function(r){ return r.json(); })
     .then(function(articles){
-      var others = articles.filter(function(x){ return x.slug !== a.slug; });
+      var others = articles
+        .filter(function(x){ return x.slug !== a.slug; })
+        .sort(function(x, y){ return new Date(y.publishedAt || y.date) - new Date(x.publishedAt || x.date); });
 
-      var related = others.slice(0, 3);
+      var related = others.slice().sort(function(x, y){
+        var xMatch = x.cat === a.cat ? 0 : 1;
+        var yMatch = y.cat === a.cat ? 0 : 1;
+        return xMatch - yMatch;
+      }).slice(0, 3);
       var relEl = document.getElementById('relatedGrid');
       if (relEl) {
         relEl.innerHTML = related.map(function(r){
@@ -69,7 +91,7 @@
         trendEl.innerHTML = trending.map(function(r, i){
           return '<div class="trending-item" onclick="window.location.href=\'/article/' + r.slug + '\'">' +
             '<div class="trending-num">0' + (i+1) + '</div>' +
-            '<div><h5>' + r.title + '</h5><span>' + r.cat + ' · ' + r.date + '</span></div>' +
+            '<div><h5>' + r.title + '</h5><span>' + r.cat + ' · ' + timeAgo(r.publishedAt) + '</span></div>' +
           '</div>';
         }).join('');
       }

@@ -42,7 +42,13 @@ if (strpos($image, 'http') !== 0) {
     $image = 'https://trendmintmedia.com' . $image;
 }
 $canonical = 'https://trendmintmedia.com/article/' . htmlspecialchars($slug, ENT_QUOTES, 'UTF-8');
-$articleJson = htmlspecialchars(json_encode($article), ENT_QUOTES, 'UTF-8');
+// NOTE: this is embedded directly inside a <script> block below, not an HTML
+// attribute, so it must be JS-safe JSON (JSON_HEX_*), not htmlspecialchars().
+// htmlspecialchars() turns " and & into &quot;/&amp; entities, which browsers
+// do NOT decode inside <script> text, breaking the JS with a syntax error and
+// silently killing every feature that depends on window.CURRENT_ARTICLE
+// (related articles, trending sidebar, share links, mobile nav, ads).
+$articleJson = json_encode($article, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_SLASHES);
 ?>
 <!DOCTYPE html>
 <html lang="en">

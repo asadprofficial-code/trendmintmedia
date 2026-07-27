@@ -4,6 +4,23 @@
   /* ---------- ARTICLES DATA (now loaded from data.json, not data.js) ---------- */
   var articles = [];
 
+  /* ---------- RELATIVE TIME ("5 min ago", "3 hours ago"...) ---------- */
+  function timeAgo(iso){
+    if(!iso) return '';
+    var then = new Date(iso).getTime();
+    if(isNaN(then)) return '';
+    var diffSec = Math.floor((Date.now() - then) / 1000);
+    if(diffSec < 60) return 'Just now';
+    var diffMin = Math.floor(diffSec / 60);
+    if(diffMin < 60) return diffMin + ' min ago';
+    var diffHr = Math.floor(diffMin / 60);
+    if(diffHr < 24) return diffHr + (diffHr === 1 ? ' hour ago' : ' hours ago');
+    var diffDay = Math.floor(diffHr / 24);
+    if(diffDay < 7) return diffDay + (diffDay === 1 ? ' day ago' : ' days ago');
+    return new Date(iso).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+  }
+  window.timeAgo = timeAgo;
+
   /* ---------- ROUTER ---------- */
   var pages = document.querySelectorAll('.page');
   var navLinksAll = document.querySelectorAll('[data-route]');
@@ -54,11 +71,6 @@
     document.body.style.overflow = open ? 'hidden' : '';
   });
 
-  /* ---------- ANNOUNCEMENT BAR ---------- */
-  document.getElementById('announceClose').addEventListener('click', function(){
-    document.getElementById('announceBar').setAttribute('hidden','');
-  });
-
   /* ---------- HERO KICKER ROTATOR ---------- */
   var kickerWords = ['Celebrity','Business','Politics','Sports','World','Entertainment'];
   var ki = 0;
@@ -73,20 +85,6 @@
         kickerEl.style.opacity = 1;
       }, 300);
     }, 2600);
-  }
-
-  /* ---------- TESTIMONIAL SLIDER ---------- */
-  var slides = document.querySelectorAll('.testi-slide');
-  var dots = document.querySelectorAll('.testi-dots button');
-  var ti = 0;
-  function showSlide(i){
-    slides.forEach(function(s,idx){ s.classList.toggle('is-active', idx===i); });
-    dots.forEach(function(d,idx){ d.classList.toggle('is-active', idx===i); });
-    ti = i;
-  }
-  dots.forEach(function(d){ d.addEventListener('click', function(){ showSlide(parseInt(d.getAttribute('data-i'),10)); }); });
-  if(!reduceMotion && slides.length){
-    setInterval(function(){ showSlide((ti+1) % slides.length); }, 5500);
   }
 
   /* ---------- SCROLL REVEAL ---------- */
@@ -113,7 +111,7 @@
       '<div class="frame"><span class="corner-a"></span><span class="corner-b"></span><span class="tag">'+a.cat+'</span>' +
       '<img src="'+a.img+'" alt="'+a.title.replace(/"/g,'')+'" loading="lazy" onerror="this.style.opacity=\'0\'"></div>' +
       '<div class="listing-body">' +
-        '<div class="listing-meta"><span>'+a.date+'</span><span>·</span><span>'+a.read+'</span></div>' +
+        '<div class="listing-meta"><span>'+timeAgo(a.publishedAt)+'</span><span>·</span><span>'+a.read+'</span></div>' +
         '<h3>'+a.title+'</h3>' +
         '<p>'+a.excerpt+'</p>' +
         '<div class="listing-foot"><button class="read-btn" data-idx="'+idx+'">Read Article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button></div>' +
@@ -129,7 +127,7 @@ function getFilteredIndexes(){
   return articles
     .map(function(a, idx){ return {a: a, idx: idx}; })
     .filter(function(item){ return currentFilter === 'All' || item.a.cat === currentFilter; })
-    .sort(function(x, y){ return parseArticleDate(y.a.date) - parseArticleDate(x.a.date); });
+    .sort(function(x, y){ return parseArticleDate(y.a.publishedAt || y.a.date) - parseArticleDate(x.a.publishedAt || x.a.date); });
 }
 
   function renderPagination(totalItems){
@@ -172,6 +170,44 @@ function getFilteredIndexes(){
 
     renderPagination(filtered.length);
     revealOnScroll();
+  }
+
+  /* ---------- HOMEPAGE: "EDITOR'S PICK" HERO + "JUST PUBLISHED" GRID ---------- */
+  /* Always reflects the real, most recently published articles — sorted by
+     publishedAt, newest first. A newly added article with a newer
+     publishedAt automatically surfaces here without any other change. */
+  function renderHomeFeatured(){
+    var sorted = articles
+      .map(function(a, idx){ return {a:a, idx:idx}; })
+      .sort(function(x, y){ return new Date(y.a.publishedAt || y.a.date) - new Date(x.a.publishedAt || x.a.date); });
+    if(!sorted.length) return;
+
+    var top = sorted[0];
+    var heroLink = document.getElementById('heroPick');
+    if(heroLink){
+      heroLink.href = '/article/' + top.a.slug;
+      document.getElementById('heroPickTag').textContent = top.a.cat;
+      var heroImg = document.getElementById('heroPickImg');
+      heroImg.src = top.a.img;
+      heroImg.alt = top.a.title;
+      document.getElementById('heroPickTitle').textContent = top.a.title;
+      document.getElementById('heroPickExcerpt').textContent = top.a.excerpt;
+    }
+
+    var homeGrid = document.getElementById('homeLatestGrid');
+    if(homeGrid){
+      var latest = sorted.slice(1, 7);
+      homeGrid.innerHTML = latest.map(function(item){ return cardHTML(item.a, item.idx); }).join('');
+    }
+
+    var articleCountEl = document.getElementById('statArticleCount');
+    if(articleCountEl) articleCountEl.textContent = articles.length + '+';
+    var categoryCountEl = document.getElementById('statCategoryCount');
+    if(categoryCountEl){
+      var uniqueCats = {};
+      articles.forEach(function(a){ uniqueCats[a.cat] = true; });
+      categoryCountEl.textContent = Object.keys(uniqueCats).length;
+    }
   }
 
   /* ---------- FILTERING ---------- */
@@ -256,6 +292,7 @@ function getFilteredIndexes(){
     .then(function(data){
       articles = data;
       renderGrid();
+      renderHomeFeatured();
       routeFromPath();
       window.addEventListener('popstate', routeFromPath);
     })

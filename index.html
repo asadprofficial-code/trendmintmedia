@@ -32,16 +32,6 @@
 </head>
 <body>
 
-<!-- ANNOUNCEMENT BAR -->
-<div class="announce" id="announceBar">
-  <div class="announce-inner">
-    <span><strong>Trending now:</strong> The AI feature everyone's suddenly using without noticing — read today's top story.</span>
-  </div>
-  <button class="announce-close" id="announceClose" aria-label="Dismiss announcement">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
-  </button>
-</div>
-
 <!-- HEADER -->
 <header class="site-header">
   <div class="header-inner">
@@ -91,39 +81,43 @@
         <h1 id="home-h1">Stories worth pausing<br>the scroll <em>for.</em></h1>
         <p class="lede">TrendMint Media curates the celebrity news and analysis that actually matters — written with editorial care, published fast, never clickbait.</p>
         <div class="hero-actions">
-        <a href="https://www.effectivecpmnetwork.com/r82rdts9yc?key=58f934e477d033207778adb1a63eee3d" class="btn btn-primary" target="_blank">Start Reading</a>
+        <a href="#listings" data-route="listings" class="btn btn-primary">Start Reading</a>
           <a href="#about" data-route="about" class="btn btn-ghost">Meet The Team</a>
         </div>
         <div class="hero-stats">
-          <div><b>180K+</b><span>Monthly Readers</span></div>
-          <div><b>40+</b><span>Stories Weekly</span></div>
-          <div><b>6</b><span>Beats Covered</span></div>
+          <div><b id="statArticleCount">–</b><span>Stories Published</span></div>
+          <div><b id="statCategoryCount">–</b><span>Beats Covered</span></div>
+          <div><b>2021</b><span>Est.</span></div>
         </div>
       </div>
 
-      <div class="hero-visual" data-reveal>
+      <a href="#" class="hero-visual" id="heroPick" data-reveal>
         <div class="frame">
           <span class="corner-a"></span><span class="corner-b"></span>
-          <span class="tag">Editor's Pick</span>
-          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80" alt="Concert stage lights representing and celebrity culture coverage" loading="lazy" onerror="this.style.opacity='0'">
+          <span class="tag" id="heroPickTag">Editor's Pick</span>
+          <img id="heroPickImg" src="" alt="" loading="lazy" onerror="this.style.opacity='0'">
         </div>
         <div class="hero-floater">
-          <p><b>Inside The Year's Biggest Comeback</b>The story everyone's reading right now — and why it matters more than the headlines suggest.</p>
+          <p><b id="heroPickTitle"></b><span id="heroPickExcerpt"></span></p>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 
   <div class="ticker-wrap" aria-hidden="true">
     <div class="ticker">
-      <span><b>180K+</b>Monthly Readers</span>
-      <span><b>★</b>Celebrity News</span>
-      <span><b>★</b>Trending Topics</span>
-      <span><b>40+</b>New Stories Weekly</span>
-      <span><b>180K+</b>Monthly Readers</span>
-      <span><b>★</b>Celebrity News</span>
-      <span><b>★</b>Trending Topics</span>
-      <span><b>40+</b>New Stories Weekly</span>
+      <span><b>★</b>Celebrity</span>
+      <span><b>★</b>Business</span>
+      <span><b>★</b>Politics</span>
+      <span><b>★</b>Sports</span>
+      <span><b>★</b>World</span>
+      <span><b>★</b>Entertainment</span>
+      <span><b>★</b>Celebrity</span>
+      <span><b>★</b>Business</span>
+      <span><b>★</b>Politics</span>
+      <span><b>★</b>Sports</span>
+      <span><b>★</b>World</span>
+      <span><b>★</b>Entertainment</span>
     </div>
   </div>
 
@@ -187,98 +181,10 @@
   <section class="section">
     <div class="container">
       <div class="section-head center" data-reveal>
-        <span class="eyebrow" style="justify-content:center;">On Camera</span>
-        <h2>Featured video: this week, unpacked.</h2>
+        <span class="eyebrow" style="justify-content:center;">Fresh Off The Desk</span>
+        <h2>Just published.</h2>
       </div>
-      <div class="video-carousel-wrap" data-reveal>
-        <button class="vc-arrow vc-arrow-left" type="button" aria-label="Scroll videos left" onclick="this.nextElementSibling.scrollBy({left:-260,behavior:'smooth'})">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-        </button>
-        <div class="video-carousel" id="videoCarousel">
-          <div class="video-card">
-            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=500&q=80" aria-label="This week's biggest trending stories explained">
-              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
-              Your browser does not support embedded video.
-            </video>
-            <div class="video-caption">
-              <h4>The AI Feature Everyone's Using</h4>
-              <span>6 MIN · BUSINESS</span>
-            </div>
-          </div>
-          <div class="video-card">
-            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=500&q=80" aria-label="Inside the year's biggest comeback">
-              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
-              Your browser does not support embedded video.
-            </video>
-            <div class="video-caption">
-              <h4>Inside The Year's Biggest Comeback</h4>
-              <span>4 MIN · CELEBRITY</span>
-            </div>
-          </div>
-          <div class="video-card">
-            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=500&q=80" aria-label="Markets explained in plain language">
-              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
-              Your browser does not support embedded video.
-            </video>
-            <div class="video-caption">
-              <h4>Markets, Explained Simply</h4>
-              <span>5 MIN · BUSINESS</span>
-            </div>
-          </div>
-          <div class="video-card">
-            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=500&q=80" aria-label="This week in sports">
-              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
-              Your browser does not support embedded video.
-            </video>
-            <div class="video-caption">
-              <h4>This Week In Sports</h4>
-              <span>3 MIN · SPORTS</span>
-            </div>
-          </div>
-          <div class="video-card">
-            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=500&q=80" aria-label="What's trending right now">
-              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
-              Your browser does not support embedded video.
-            </video>
-            <div class="video-caption">
-              <h4>What's Trending Right Now</h4>
-              <span>5 MIN · TRENDING</span>
-            </div>
-          </div>
-        </div>
-        <button class="vc-arrow vc-arrow-right" type="button" aria-label="Scroll videos right" onclick="this.previousElementSibling.scrollBy({left:260,behavior:'smooth'})">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-head center" data-reveal>
-        <span class="eyebrow" style="justify-content:center;">Reader Voices</span>
-        <h2>Trusted by people who read a lot of the internet.</h2>
-      </div>
-      <div class="testi-wrap" data-reveal>
-        <div class="testi-quote-mark">&ldquo;</div>
-        <div class="testi-slide is-active">
-          <p>TrendMint is the only site I actually open every morning. The business breakdowns alone are worth the click.</p>
-          <div class="testi-name">Maya R. <span>— Daily Reader</span></div>
-        </div>
-        <div class="testi-slide">
-          <p>Finally site that doesn't feel like an ad farm. Clean, fast, and surprisingly smart.</p>
-          <div class="testi-name">Jordan K. <span>— Newsletter Subscriber</span></div>
-        </div>
-        <div class="testi-slide">
-          <p>I came for the celebrity news and stayed for the business coverage. Did not expect that, in a good way.</p>
-          <div class="testi-name">Priya S. <span>— Reader Since 2023</span></div>
-        </div>
-        <div class="testi-dots">
-          <button class="is-active" data-i="0" aria-label="Show testimonial 1"></button>
-          <button data-i="1" aria-label="Show testimonial 2"></button>
-          <button data-i="2" aria-label="Show testimonial 3"></button>
-        </div>
-      </div>
+      <div class="listing-grid" id="homeLatestGrid" data-reveal><!-- injected by JS: latest published articles --></div>
     </div>
   </section>
 
