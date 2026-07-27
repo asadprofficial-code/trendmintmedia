@@ -97,8 +97,8 @@ h1,h2,h3,h4{
 }
 .announce-inner strong{color:var(--gold-bright); font-weight:700;}
 .announce-close{
-  position:absolute; right:18px; top:50%; transform:translateY(-50%);
-  color:var(--grey-dim); width:22px; height:22px; display:flex; align-items:center; justify-content:center;
+  position:absolute; right:8px; top:50%; transform:translateY(-50%);
+  color:var(--grey-dim); width:40px; height:40px; display:flex; align-items:center; justify-content:center;
   border-radius:50%; transition:color .25s, background .25s;
 }
 .announce-close:hover{color:var(--gold-bright); background:rgba(244,239,226,0.06);}
@@ -137,8 +137,8 @@ h1,h2,h3,h4{
 .nav-list a:hover::after, .nav-list a.active::after{width:100%;}
 
 .header-actions{display:flex; align-items:center; gap:20px;}
-.hamburger{display:none; flex-direction:column; gap:5px; width:26px; z-index:120;}
-.hamburger span{display:block; height:1.5px; width:100%; background:var(--cream); transition:transform .3s var(--ease), opacity .3s;}
+.hamburger{display:none; flex-direction:column; align-items:center; justify-content:center; gap:5px; width:44px; height:44px; z-index:120;}
+.hamburger span{display:block; height:1.5px; width:26px; background:var(--cream); transition:transform .3s var(--ease), opacity .3s;}
 .hamburger.is-open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
 .hamburger.is-open span:nth-child(2){opacity:0;}
 .hamburger.is-open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
@@ -351,9 +351,15 @@ h1,h2,h3,h4{
 .testi-slide p{font-family:var(--serif); font-size:clamp(20px,2.6vw,28px); font-weight:400; color:var(--cream); line-height:1.4;}
 .testi-name{margin-top:26px; font-size:13px; letter-spacing:0.05em; color:var(--gold);}
 .testi-name span{color:var(--grey-dim);}
-.testi-dots{display:flex; justify-content:center; gap:10px; margin-top:34px;}
-.testi-dots button{width:8px; height:8px; border-radius:50%; background:var(--line); transition:background .3s, transform .3s;}
-.testi-dots button.is-active{background:var(--gold-bright); transform:scale(1.3);}
+.testi-dots{display:flex; justify-content:center; gap:2px; margin-top:34px;}
+.testi-dots button{
+  width:32px; height:32px; display:flex; align-items:center; justify-content:center; background:none;
+}
+.testi-dots button::before{
+  content:""; width:8px; height:8px; border-radius:50%; background:var(--line);
+  transition:background .3s, transform .3s;
+}
+.testi-dots button.is-active::before{background:var(--gold-bright); transform:scale(1.3);}
 
 /* ============================================================
    ABOUT PREVIEW (home)
@@ -497,7 +503,7 @@ h1,h2,h3,h4{
 .field label{display:block; font-size:12px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--grey); margin-bottom:9px;}
 .field input, .field textarea{
   width:100%; background:rgba(244,239,226,0.03); border:1px solid var(--line-soft); color:var(--cream);
-  padding:14px 16px; font-size:14.5px; font-family:var(--sans); transition:border-color .3s, background .3s;
+  padding:14px 16px; font-size:16px; font-family:var(--sans); transition:border-color .3s, background .3s;
 }
 .field input:focus, .field textarea:focus{border-color:var(--gold); background:rgba(244,239,226,0.05); outline:none;}
 .field textarea{resize:vertical; min-height:130px;}
