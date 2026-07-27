@@ -1,0 +1,21 @@
+Options -MultiViews
+RewriteEngine On
+
+# /article/slug-name -> article.php (server-side meta tags, no more JS redirect bug)
+RewriteRule ^article/([^/]+)/?$ /article.php [L,QSA]
+
+# Don't rewrite requests for real files, folders, or the articles/images directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/articles/
+RewriteCond %{REQUEST_URI} !^/images/
+RewriteCond %{REQUEST_URI} !^/article/
+# Everything else (/listings, /about, /services, /contact, etc.) -> index.html
+RewriteRule ^ index.html [L]
+
+# data.json must never be cached — always serve the freshest article list
+<FilesMatch "data\.json$">
+  Header set Cache-Control "no-cache, no-store, must-revalidate"
+  Header set Pragma "no-cache"
+  Header set Expires "0"
+</FilesMatch>
