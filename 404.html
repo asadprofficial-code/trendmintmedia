@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TrendMint Media</title>
+<script>
+  // GitHub Pages serves this for any URL that isn't a real file - which,
+  // for a single-page app with clean URLs (/about, /article/some-slug),
+  // is every route except the homepage. Stash the path the visitor
+  // actually wanted and bounce to index.html; script.js reads it back
+  // out of sessionStorage (see routeFromPath) and renders that route.
+  sessionStorage.setItem('spa-redirect', location.pathname + location.search + location.hash);
+  var base = /(^|\.)github\.io$/.test(location.hostname) ? '/trendmintmedia/' : '/';
+  location.replace(base);
+</script>
+</head>
+<body></body>
+</html>

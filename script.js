@@ -4,6 +4,32 @@
   /* ---------- ARTICLES DATA (now loaded from data.json, not data.js) ---------- */
   var articles = [];
 
+  /* ---------- BASE PATH ----------
+     On the real domain (Hostinger, trendmintmedia.com) the site is hosted
+     at the root. On GitHub Pages it's served under a /trendmintmedia
+     project subpath instead, so every link, pushState path, fetch and
+     image src that isn't already relative-safe needs this prefix.
+     Update the repo-name check below if the repo is ever renamed. */
+  var BASE_PATH = /(^|\.)github\.io$/.test(location.hostname) ? '/trendmintmedia' : '';
+  window.BASE_PATH = BASE_PATH;
+
+  /* ---------- RELATIVE TIME ("5 min ago", "3 hours ago"...) ---------- */
+  function timeAgo(iso){
+    if(!iso) return '';
+    var then = new Date(iso).getTime();
+    if(isNaN(then)) return '';
+    var diffSec = Math.floor((Date.now() - then) / 1000);
+    if(diffSec < 60) return 'Just now';
+    var diffMin = Math.floor(diffSec / 60);
+    if(diffMin < 60) return diffMin + ' min ago';
+    var diffHr = Math.floor(diffMin / 60);
+    if(diffHr < 24) return diffHr + (diffHr === 1 ? ' hour ago' : ' hours ago');
+    var diffDay = Math.floor(diffHr / 24);
+    if(diffDay < 7) return diffDay + (diffDay === 1 ? ' day ago' : ' days ago');
+    return new Date(iso).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+  }
+  window.timeAgo = timeAgo;
+
   /* ---------- ROUTER ---------- */
   var pages = document.querySelectorAll('.page');
   var navLinksAll = document.querySelectorAll('[data-route]');
@@ -15,6 +41,11 @@
     contact:'Contact — TrendMint Media'
   };
 
+  function pushRoute(path){
+    var full = BASE_PATH + path;
+    if(location.pathname !== full){ history.pushState({path:full}, '', full); }
+  }
+
   function showPage(id, filter){
     pages.forEach(function(p){ p.classList.toggle('is-active', p.id === id); });
     navLinksAll.forEach(function(a){
@@ -22,12 +53,10 @@
         a.classList.toggle('active', a.getAttribute('data-route') === id);
       }
     });
-   if(titles[id]) document.title = titles[id];
+    if(titles[id]) document.title = titles[id];
     closeMobileNav();
     window.scrollTo({top:0, behavior:'auto'});
     if(id === 'listings'){ applyFilter(filter || 'All'); }
-    var path = (id === 'home') ? '/' : '/' + id;
-    if(location.pathname !== path){ history.pushState({page:id}, '', path); }
     revealOnScroll();
   }
 
@@ -35,7 +64,9 @@
     var el = e.target.closest('[data-route]');
     if(!el) return;
     e.preventDefault();
-    showPage(el.getAttribute('data-route'), el.getAttribute('data-filter'));
+    var id = el.getAttribute('data-route');
+    showPage(id, el.getAttribute('data-filter'));
+    pushRoute(id === 'home' ? '/' : '/' + id);
   });
 
   /* ---------- MOBILE NAV ---------- */
@@ -54,11 +85,6 @@
     document.body.style.overflow = open ? 'hidden' : '';
   });
 
-  /* ---------- ANNOUNCEMENT BAR ---------- */
-  document.getElementById('announceClose').addEventListener('click', function(){
-    document.getElementById('announceBar').setAttribute('hidden','');
-  });
-
   /* ---------- HERO KICKER ROTATOR ---------- */
   var kickerWords = ['Celebrity','Business','Politics','Sports','World','Entertainment'];
   var ki = 0;
@@ -73,20 +99,6 @@
         kickerEl.style.opacity = 1;
       }, 300);
     }, 2600);
-  }
-
-  /* ---------- TESTIMONIAL SLIDER ---------- */
-  var slides = document.querySelectorAll('.testi-slide');
-  var dots = document.querySelectorAll('.testi-dots button');
-  var ti = 0;
-  function showSlide(i){
-    slides.forEach(function(s,idx){ s.classList.toggle('is-active', idx===i); });
-    dots.forEach(function(d,idx){ d.classList.toggle('is-active', idx===i); });
-    ti = i;
-  }
-  dots.forEach(function(d){ d.addEventListener('click', function(){ showSlide(parseInt(d.getAttribute('data-i'),10)); }); });
-  if(!reduceMotion && slides.length){
-    setInterval(function(){ showSlide((ti+1) % slides.length); }, 5500);
   }
 
   /* ---------- SCROLL REVEAL ---------- */
@@ -111,9 +123,9 @@
   function cardHTML(a, idx){
     return '<article class="listing-card" data-cat="'+a.cat+'" data-idx="'+idx+'">' +
       '<div class="frame"><span class="corner-a"></span><span class="corner-b"></span><span class="tag">'+a.cat+'</span>' +
-      '<img src="'+a.img+'" alt="'+a.title.replace(/"/g,'')+'" loading="lazy" onerror="this.style.opacity=\'0\'"></div>' +
+      '<img src="'+BASE_PATH+a.img+'" alt="'+a.title.replace(/"/g,'')+'" loading="lazy" onerror="this.style.opacity=\'0\'"></div>' +
       '<div class="listing-body">' +
-        '<div class="listing-meta"><span>'+a.date+'</span><span>·</span><span>'+a.read+'</span></div>' +
+        '<div class="listing-meta"><span>'+timeAgo(a.publishedAt)+'</span><span>·</span><span>'+a.read+'</span></div>' +
         '<h3>'+a.title+'</h3>' +
         '<p>'+a.excerpt+'</p>' +
         '<div class="listing-foot"><button class="read-btn" data-idx="'+idx+'">Read Article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button></div>' +
@@ -129,7 +141,7 @@ function getFilteredIndexes(){
   return articles
     .map(function(a, idx){ return {a: a, idx: idx}; })
     .filter(function(item){ return currentFilter === 'All' || item.a.cat === currentFilter; })
-    .sort(function(x, y){ return parseArticleDate(y.a.date) - parseArticleDate(x.a.date); });
+    .sort(function(x, y){ return parseArticleDate(y.a.publishedAt || y.a.date) - parseArticleDate(x.a.publishedAt || x.a.date); });
 }
 
   function renderPagination(totalItems){
@@ -174,6 +186,45 @@ function getFilteredIndexes(){
     revealOnScroll();
   }
 
+  /* ---------- HOMEPAGE: "EDITOR'S PICK" HERO + "JUST PUBLISHED" GRID ---------- */
+  /* Always reflects the real, most recently published articles — sorted by
+     publishedAt, newest first. A newly added article with a newer
+     publishedAt automatically surfaces here without any other change. */
+  function renderHomeFeatured(){
+    var sorted = articles
+      .map(function(a, idx){ return {a:a, idx:idx}; })
+      .sort(function(x, y){ return new Date(y.a.publishedAt || y.a.date) - new Date(x.a.publishedAt || x.a.date); });
+    if(!sorted.length) return;
+
+    var top = sorted[0];
+    var heroLink = document.getElementById('heroPick');
+    if(heroLink){
+      heroLink.href = BASE_PATH + '/article/' + top.a.slug;
+      heroLink.setAttribute('data-article-slug', top.a.slug);
+      document.getElementById('heroPickTag').textContent = top.a.cat;
+      var heroImg = document.getElementById('heroPickImg');
+      heroImg.src = BASE_PATH + top.a.img;
+      heroImg.alt = top.a.title;
+      document.getElementById('heroPickTitle').textContent = top.a.title;
+      document.getElementById('heroPickExcerpt').textContent = top.a.excerpt;
+    }
+
+    var homeGrid = document.getElementById('homeLatestGrid');
+    if(homeGrid){
+      var latest = sorted.slice(1, 7);
+      homeGrid.innerHTML = latest.map(function(item){ return cardHTML(item.a, item.idx); }).join('');
+    }
+
+    var articleCountEl = document.getElementById('statArticleCount');
+    if(articleCountEl) articleCountEl.textContent = articles.length + '+';
+    var categoryCountEl = document.getElementById('statCategoryCount');
+    if(categoryCountEl){
+      var uniqueCats = {};
+      articles.forEach(function(a){ uniqueCats[a.cat] = true; });
+      categoryCountEl.textContent = Object.keys(uniqueCats).length;
+    }
+  }
+
   /* ---------- FILTERING ---------- */
   var filterBtns = document.querySelectorAll('.filter-btn');
   function applyFilter(cat){
@@ -188,14 +239,77 @@ function getFilteredIndexes(){
   }
   filterBtns.forEach(function(b){ b.addEventListener('click', function(){ applyFilter(b.getAttribute('data-filter')); }); });
 
-  /* ---------- ARTICLE PAGE ---------- */
+  /* ---------- ARTICLE PAGE (rendered client-side — no PHP on GitHub Pages) ---------- */
+  function findArticle(slug){
+    for(var i=0; i<articles.length; i++){ if(articles[i].slug === slug) return articles[i]; }
+    return null;
+  }
+
+  function relatedCardHTML(a){
+    return '<div class="related-card" data-article-slug="'+a.slug+'">' +
+      '<img src="'+BASE_PATH+a.img+'" alt="'+a.title.replace(/"/g,'')+'" loading="lazy" onerror="this.style.opacity=\'0\'">' +
+      '<div class="related-card-body"><span class="eyebrow">'+a.cat+'</span><h4>'+a.title+'</h4></div>' +
+    '</div>';
+  }
+
+  function trendingItemHTML(a, i){
+    return '<div class="trending-item" data-article-slug="'+a.slug+'">' +
+      '<div class="trending-num">0'+(i+1)+'</div>' +
+      '<div><h5>'+a.title+'</h5><span>'+a.cat+' · '+timeAgo(a.publishedAt)+'</span></div>' +
+    '</div>';
+  }
+
+  function openArticleBySlug(slug){
+    var a = findArticle(slug);
+    if(!a){ showPage('home'); pushRoute('/'); return; }
+
+    document.getElementById('art-cat').textContent = a.cat;
+    document.getElementById('art-title').textContent = a.title;
+    document.getElementById('art-meta').textContent = timeAgo(a.publishedAt) + ' · ' + a.read;
+    var heroImg = document.getElementById('art-hero-img');
+    heroImg.src = BASE_PATH + a.img;
+    heroImg.alt = a.title;
+
+    document.getElementById('art-body').innerHTML = a.body.map(function(p){ return '<p>'+p+'</p>'; }).join('');
+
+    var pageUrl = encodeURIComponent(window.location.origin + BASE_PATH + '/article/' + a.slug);
+    var pageTitle = encodeURIComponent(a.title);
+    document.getElementById('art-share-twitter').href = 'https://twitter.com/intent/tweet?url=' + pageUrl + '&text=' + pageTitle;
+    document.getElementById('art-share-facebook').href = 'https://www.facebook.com/sharer/sharer.php?u=' + pageUrl;
+
+    var others = articles
+      .filter(function(x){ return x.slug !== a.slug; })
+      .sort(function(x, y){ return new Date(y.publishedAt || y.date) - new Date(x.publishedAt || x.date); });
+    var related = others.slice().sort(function(x, y){
+      var xMatch = x.cat === a.cat ? 0 : 1;
+      var yMatch = y.cat === a.cat ? 0 : 1;
+      return xMatch - yMatch;
+    }).slice(0, 3);
+    document.getElementById('art-related').innerHTML = related.map(relatedCardHTML).join('');
+    document.getElementById('art-trending').innerHTML = others.slice(0, 5).map(trendingItemHTML).join('');
+
+    document.title = a.title + ' — TrendMint Media';
+    showPage('article-page');
+    pushRoute('/article/' + a.slug);
+  }
+
+  var shareCopyEl = document.getElementById('art-share-copy');
+  if(shareCopyEl){
+    shareCopyEl.addEventListener('click', function(e){
+      e.preventDefault();
+      navigator.clipboard.writeText(window.location.href).then(function(){ alert('Link copied!'); });
+    });
+  }
+
   function openArticle(idx){
     var a = articles[idx];
     if(!a) return;
-    window.location.href = '/article/' + a.slug;
+    openArticleBySlug(a.slug);
   }
 
   document.addEventListener('click', function(e){
+    var artLink = e.target.closest('[data-article-slug]');
+    if(artLink){ e.preventDefault(); openArticleBySlug(artLink.getAttribute('data-article-slug')); return; }
     var btn = e.target.closest('.read-btn');
     if(btn){ openArticle(parseInt(btn.getAttribute('data-idx'),10)); return; }
     var card = e.target.closest('.listing-card');
@@ -214,7 +328,7 @@ function getFilteredIndexes(){
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending…';
 
-    fetch('/contact.php', { method: 'POST', body: new FormData(form) })
+    fetch(BASE_PATH + '/contact.php', { method: 'POST', body: new FormData(form) })
       .then(function(r){ return r.json(); })
       .then(function(data){
         if(data.success){
@@ -243,19 +357,40 @@ function getFilteredIndexes(){
 
   /* ---------- INIT ---------- */
   function routeFromPath(){
-    var path = window.location.pathname.replace(/^\/|\/$/g,'');
-    if(path.indexOf('article/') === 0){ return; }
     if(!pages.length){ return; }
+
+    // GitHub Pages has no server-side rewrites, so a direct load or
+    // refresh of e.g. /trendmintmedia/article/some-slug 404s. 404.html
+    // stashes the intended path here before bouncing back to index.html.
+    var stashed = sessionStorage.getItem('spa-redirect');
+    var rawPath = window.location.pathname;
+    if(stashed){
+      sessionStorage.removeItem('spa-redirect');
+      rawPath = stashed.split('?')[0].split('#')[0];
+    }
+
+    var path = rawPath;
+    if(BASE_PATH && path.indexOf(BASE_PATH) === 0){ path = path.slice(BASE_PATH.length); }
+    path = path.replace(/^\/|\/$/g,'');
+
+    if(path.indexOf('article/') === 0){
+      var slug = path.slice('article/'.length);
+      if(slug){ openArticleBySlug(slug); return; }
+    }
+
     var validPages = ['home','about','services','listings','contact'];
-    showPage(validPages.indexOf(path) !== -1 ? path : 'home');
+    var id = validPages.indexOf(path) !== -1 ? path : 'home';
+    showPage(id);
+    if(stashed){ pushRoute(id === 'home' ? '/' : '/' + id); }
   }
 
   /* ---------- LOAD ARTICLES FROM data.json, THEN INITIALIZE ---------- */
-  fetch('/articles/data.json', { cache: 'no-store' })
+  fetch(BASE_PATH + '/articles/data.json', { cache: 'no-store' })
     .then(function(r){ return r.json(); })
     .then(function(data){
       articles = data;
       renderGrid();
+      renderHomeFeatured();
       routeFromPath();
       window.addEventListener('popstate', routeFromPath);
     })
