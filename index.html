@@ -27,7 +27,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="article.css">
 <script src="https://pl30102985.effectivecpmnetwork.com/2e/02/a6/2e02a66c06765e4f5a6c763cd52845a1.js"></script>
 </head>
 <body>
@@ -532,6 +533,66 @@
 
 </main>
 
+<!-- PAGE: SINGLE ARTICLE (rendered client-side from articles/data.json -
+     needed because this site is currently hosted on GitHub Pages, which
+     can't run article.php's server-side PHP rendering) -->
+<section class="page" id="article-page" aria-labelledby="art-title">
+  <div class="article-header container">
+    <span class="eyebrow" id="art-cat">Category</span>
+    <h1 id="art-title">Title</h1>
+    <div class="art-meta" id="art-meta">Date · Read time</div>
+  </div>
+  <div class="article-hero" id="art-hero">
+    <img id="art-hero-img" src="" alt="">
+  </div>
+  <div class="container">
+    <div class="article-layout">
+      <div style="min-width:0;">
+        <div class="back-bar">
+          <a href="#listings" data-route="listings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+            Back to Stories
+          </a>
+        </div>
+
+        <div class="article-body" id="art-body"></div>
+
+        <div class="share-row">
+          <span>Share</span>
+          <a class="share-btn" id="art-share-twitter" href="#" target="_blank" rel="noopener" aria-label="Share on Twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1-.7-.8-1.8-1.3-2.9-1.3-2.2 0-4 1.8-4 4 0 .3 0 .6.1.9-3.3-.2-6.2-1.8-8.2-4.2-.3.6-.5 1.3-.5 2 0 1.4.7 2.6 1.8 3.3-.7 0-1.3-.2-1.9-.5 0 1.9 1.4 3.5 3.2 3.9-.3.1-.7.1-1.1.1-.3 0-.5 0-.8-.1.5 1.6 2 2.8 3.8 2.8-1.4 1.1-3.1 1.7-5 1.7-.3 0-.6 0-1-.1 1.8 1.2 4 1.8 6.3 1.8 7.5 0 11.6-6.3 11.6-11.7v-.5c.8-.6 1.5-1.3 2-2.1z"/></svg>
+          </a>
+          <a class="share-btn" id="art-share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.5-3h-3V8.2c0-.9.3-1.5 1.6-1.5h1.5V4.1C16 4 15 4 13.9 4c-2.4 0-4 1.5-4 4.1v2.4H7.4v3H10V21h3.5z"/></svg>
+          </a>
+          <a class="share-btn" id="art-share-copy" href="#" aria-label="Copy link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+          </a>
+        </div>
+
+        <div class="related-section">
+          <h3>More Stories</h3>
+          <div class="related-grid" id="art-related"></div>
+        </div>
+      </div>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-trending">
+          <h4>Trending Now</h4>
+          <div id="art-trending"></div>
+        </div>
+
+        <div class="sidebar-newsletter">
+          <h4>Weekly Roundup</h4>
+          <p>Get the biggest stories in your inbox every Friday.</p>
+          <input type="email" placeholder="you@email.com">
+          <a href="#contact" data-route="contact" class="btn btn-primary btn-small">Subscribe Free</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="container">
@@ -577,7 +638,7 @@
   </div>
 </footer>
 
-<script src="/script.js?v=4"></script>
+<script src="script.js?v=4"></script>
 
 </body>
 </html>
