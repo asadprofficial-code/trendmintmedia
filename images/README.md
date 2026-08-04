@@ -17,12 +17,16 @@ instead of broken/blank images.
 - 155million.png
 - benny.png
 - cher-mary-bono-legal-ruling.png
+- clueless-cast-reboot-2026.png
+- death-investigator-rigor-mortis.png
 - death.png
 - election.png
 - iran.png
 - jada.png
+- kim-kardashian-lewis-hamilton-halo.png
 - kris-jenner-robert-kardashian.png
 - liive.png
+- lorenzo-alessi-vogue-love-island.png
 - love.png
 - oprah-real-name-orpah.png
 - ronaldo.png
