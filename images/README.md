@@ -17,16 +17,12 @@ instead of broken/blank images.
 - 155million.png
 - benny.png
 - cher-mary-bono-legal-ruling.png
-- clueless-cast-reboot-2026.png
-- death-investigator-rigor-mortis.png
 - death.png
 - election.png
 - iran.png
 - jada.png
-- kim-kardashian-lewis-hamilton-halo.png
 - kris-jenner-robert-kardashian.png
 - liive.png
-- lorenzo-alessi-vogue-love-island.png
 - love.png
 - oprah-real-name-orpah.png
 - ronaldo.png
@@ -34,6 +30,12 @@ instead of broken/blank images.
 - the.png
 - trump.png
 - war.png
+
+Already present (added):
+- clueless-cast-reboot-2026.jpg
+- death-investigator-rigor-mortis.jpg
+- kim-kardashian-lewis-hamilton-halo.jpg
+- lorenzo-alessi-vogue-love-island.jpg
 
 Tip: `this.style.opacity='0'` (`onerror` handler) on `<img>` tags means a
 missing image silently disappears instead of showing a broken-image icon —
