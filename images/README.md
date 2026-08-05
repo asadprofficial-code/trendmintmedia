@@ -19,13 +19,16 @@ instead of broken/blank images.
 - cher-mary-bono-legal-ruling.png
 - death.png
 - election.png
+- fans-defend-celebrity-online.png
 - iran.png
 - jada.png
 - kris-jenner-robert-kardashian.png
 - liive.png
 - love.png
 - oprah-real-name-orpah.png
+- royal-baby-tradition.png
 - ronaldo.png
+- sabsing-dating-trend.png
 - simon.png
 - the.png
 - trump.png
