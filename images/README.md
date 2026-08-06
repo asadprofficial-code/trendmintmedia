@@ -16,10 +16,12 @@ instead of broken/blank images.
 ## Referenced by articles/data.json (article cover images)
 - 155million.png
 - benny.png
+- candida-auris-fungus-outbreak.png
 - cher-mary-bono-legal-ruling.png
 - death.png
 - election.png
 - fans-defend-celebrity-online.png
+- haitian-tps-protections-end.png
 - iran.png
 - jada.png
 - kris-jenner-robert-kardashian.png
@@ -29,7 +31,9 @@ instead of broken/blank images.
 - royal-baby-tradition.png
 - ronaldo.png
 - sabsing-dating-trend.png
+- salad-and-go-closure.png
 - simon.png
+- stewart-rhodes-jan6-dismissed.png
 - the.png
 - trump.png
 - war.png
