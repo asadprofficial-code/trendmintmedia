@@ -37,6 +37,12 @@ instead of broken/blank images.
 - the.png
 - trump.png
 - war.png
+- jorge-messi-father-dies.png
+- amazon-3-trillion-market-cap.png
+- the-odyssey-billion-dollar-record.png
+- the-odyssey-nolan-box-office-record.png
+- liam-payne-investigation-documents.png
+- joe-serafini-frankie-rodriguez-engaged.png
 
 Already present (added):
 - clueless-cast-reboot-2026.jpg
