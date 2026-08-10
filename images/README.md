@@ -43,6 +43,7 @@ instead of broken/blank images.
 - the-odyssey-nolan-box-office-record.png
 - liam-payne-investigation-documents.png
 - joe-serafini-frankie-rodriguez-engaged.png
+- kim-kardashian-lewis-hamilton-photos.png
 
 Already present (added):
 - clueless-cast-reboot-2026.jpg
