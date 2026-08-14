@@ -44,16 +44,16 @@ instead of broken/blank images.
 - liam-payne-investigation-documents.png
 - joe-serafini-frankie-rodriguez-engaged.png
 - kim-kardashian-lewis-hamilton-photos.png
-- colombia-earthquake-death-toll-rescue.png
-- uber-pony-ai-robotaxis-europe.png
-- premier-league-2026-27-season-preview.png
-- cristiano-ronaldo-georgina-rodriguez-wedding.png
 
 Already present (added):
 - clueless-cast-reboot-2026.jpg
 - death-investigator-rigor-mortis.jpg
 - kim-kardashian-lewis-hamilton-halo.jpg
 - lorenzo-alessi-vogue-love-island.jpg
+- colombia-earthquake-death-toll-rescue.png
+- uber-pony-ai-robotaxis-europe.png
+- premier-league-2026-27-season-preview.png
+- cristiano-ronaldo-georgina-rodriguez-wedding.png
 
 Tip: `this.style.opacity='0'` (`onerror` handler) on `<img>` tags means a
 missing image silently disappears instead of showing a broken-image icon —
