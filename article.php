@@ -111,15 +111,17 @@ $articleJson = json_encode($article, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUO
 <header class="site-header">
   <div class="header-inner">
     <a href="/" class="logo"><b>TrendMint</b><span class="logo-dot"></span><span>Media</span></a>
-    <nav class="nav-list">
+    <nav class="nav-list" aria-label="Primary">
       <a href="/">Home</a>
-      <a href="/#about">About</a>
-      <a href="/#services">Services</a>
-      <a href="/#listings">Listings</a>
-      <a href="/#contact">Contact</a>
+      <a href="/#listings">News</a>
+      <a href="/#listings">Celebrity</a>
+      <a href="/#listings">Entertainment</a>
+      <a href="/#listings">Sports</a>
+      <a href="/#listings">Business</a>
+      <a href="/#listings">World</a>
+      <a href="/#listings">Politics</a>
     </nav>
     <div class="header-actions">
-      <a href="/#contact" class="btn btn-primary btn-small">Get In Touch</a>
       <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -129,10 +131,13 @@ $articleJson = json_encode($article, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUO
 
 <div class="mobile-nav" id="mobileNav">
   <a href="/">Home</a>
-  <a href="/#about">About</a>
-  <a href="/#services">Services</a>
-  <a href="/#listings">Listings</a>
-  <a href="/#contact">Contact</a>
+  <a href="/#listings">News</a>
+  <a href="/#listings">Celebrity</a>
+  <a href="/#listings">Entertainment</a>
+  <a href="/#listings">Sports</a>
+  <a href="/#listings">Business</a>
+  <a href="/#listings">World</a>
+  <a href="/#listings">Politics</a>
 </div>
 
 <!-- ARTICLE HEADER -->
