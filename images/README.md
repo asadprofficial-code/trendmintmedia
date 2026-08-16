@@ -38,7 +38,6 @@ instead of broken/blank images.
 - war.png
 - joe-serafini-frankie-rodriguez-engaged.png
 - cristiano-ronaldo-georgina-rodriguez-wedding.png
-- san-francisco-rent-ai-boom.png
 - belgium-high-fens-wildfire-2026.png
 
 Already present (added):
@@ -66,6 +65,7 @@ Already present (added):
 - the-odyssey-billion-dollar-record.png
 - uber-pony-ai-robotaxis-europe.png
 - liam-payne-investigation-documents.png
+- san-francisco-rent-ai-boom.png
 
 Tip: `this.style.opacity='0'` (`onerror` handler) on `<img>` tags means a
 missing image silently disappears instead of showing a broken-image icon —
