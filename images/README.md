@@ -66,6 +66,7 @@ Already present (added):
 - uber-pony-ai-robotaxis-europe.png
 - liam-payne-investigation-documents.png
 - san-francisco-rent-ai-boom.png
+- oil-prices-strait-of-hormuz-deadlock.png
 
 Tip: `this.style.opacity='0'` (`onerror` handler) on `<img>` tags means a
 missing image silently disappears instead of showing a broken-image icon —
