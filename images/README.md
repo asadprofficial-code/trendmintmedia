@@ -48,6 +48,10 @@ instead of broken/blank images.
 - uber-pony-ai-robotaxis-europe.png
 - premier-league-2026-27-season-preview.png
 - cristiano-ronaldo-georgina-rodriguez-wedding.png
+- nigel-farage-clacton-byelection-2026.png
+- san-francisco-rent-ai-boom.png
+- belgium-high-fens-wildfire-2026.png
+- spider-man-brand-new-day-box-office.png
 
 Already present (added):
 - clueless-cast-reboot-2026.jpg
