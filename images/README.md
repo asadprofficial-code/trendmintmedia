@@ -8,7 +8,6 @@ here (matching filenames exactly) before the site will show real photos
 instead of broken/blank images.
 
 ## Referenced by index.html ("What We Cover" tiles)
-- cli.png
 - news.png
 - sport.png
 - trending.png
@@ -65,6 +64,7 @@ Already present (added):
 - total-solar-eclipse-europe-august-2026.png
 - nirmal-purja-avalanche-broad-peak.png
 - pakistan-west-indies-test-series-drawn.png
+- cli.png (homepage "What We Cover" tile)
 
 Tip: `this.style.opacity='0'` (`onerror` handler) on `<img>` tags means a
 missing image silently disappears instead of showing a broken-image icon —
