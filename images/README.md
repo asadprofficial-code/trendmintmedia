@@ -43,12 +43,10 @@ instead of broken/blank images.
 - the-odyssey-nolan-box-office-record.png
 - liam-payne-investigation-documents.png
 - joe-serafini-frankie-rodriguez-engaged.png
-- kim-kardashian-lewis-hamilton-photos.png
 - colombia-earthquake-death-toll-rescue.png
 - uber-pony-ai-robotaxis-europe.png
 - premier-league-2026-27-season-preview.png
 - cristiano-ronaldo-georgina-rodriguez-wedding.png
-- nigel-farage-clacton-byelection-2026.png
 - san-francisco-rent-ai-boom.png
 - belgium-high-fens-wildfire-2026.png
 - spider-man-brand-new-day-box-office.png
@@ -58,6 +56,11 @@ Already present (added):
 - death-investigator-rigor-mortis.jpg
 - kim-kardashian-lewis-hamilton-halo.jpg
 - lorenzo-alessi-vogue-love-island.jpg
+- nigel-farage-clacton-byelection-2026.png
+- kim-kardashian-lewis-hamilton-photos.png
+- aubrey-plaza-first-child-christopher-abbott.png
+- andrew-tristan-tate-arrested-extradition.png
+- england-france-world-cup-bronze-saka.png
 
 Tip: `this.style.opacity='0'` (`onerror` handler) on `<img>` tags means a
 missing image silently disappears instead of showing a broken-image icon —
