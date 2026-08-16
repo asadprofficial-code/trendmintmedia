@@ -36,11 +36,7 @@ instead of broken/blank images.
 - the.png
 - trump.png
 - war.png
-- the-odyssey-billion-dollar-record.png
-- the-odyssey-nolan-box-office-record.png
-- liam-payne-investigation-documents.png
 - joe-serafini-frankie-rodriguez-engaged.png
-- uber-pony-ai-robotaxis-europe.png
 - cristiano-ronaldo-georgina-rodriguez-wedding.png
 - san-francisco-rent-ai-boom.png
 - belgium-high-fens-wildfire-2026.png
@@ -67,6 +63,9 @@ Already present (added):
 - amazon-3-trillion-market-cap.png
 - jorge-messi-father-dies.png
 - spider-man-brand-new-day-box-office.png
+- the-odyssey-billion-dollar-record.png
+- uber-pony-ai-robotaxis-europe.png
+- liam-payne-investigation-documents.png
 
 Tip: `this.style.opacity='0'` (`onerror` handler) on `<img>` tags means a
 missing image silently disappears instead of showing a broken-image icon —
