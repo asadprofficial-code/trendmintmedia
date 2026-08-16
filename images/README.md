@@ -44,7 +44,6 @@ instead of broken/blank images.
 - cristiano-ronaldo-georgina-rodriguez-wedding.png
 - san-francisco-rent-ai-boom.png
 - belgium-high-fens-wildfire-2026.png
-- spider-man-brand-new-day-box-office.png
 
 Already present (added):
 - clueless-cast-reboot-2026.jpg
@@ -67,6 +66,7 @@ Already present (added):
 - spacex-nvidia-exclusive-partnership.png
 - amazon-3-trillion-market-cap.png
 - jorge-messi-father-dies.png
+- spider-man-brand-new-day-box-office.png
 
 Tip: `this.style.opacity='0'` (`onerror` handler) on `<img>` tags means a
 missing image silently disappears instead of showing a broken-image icon —
