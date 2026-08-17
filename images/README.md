@@ -8,9 +8,7 @@ here (matching filenames exactly) before the site will show real photos
 instead of broken/blank images.
 
 ## Referenced by index.html ("What We Cover" tiles)
-- news.png
-- sport.png
-- trending.png
+(all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
 - 155million.png
@@ -55,7 +53,10 @@ Already present (added):
 - total-solar-eclipse-europe-august-2026.png
 - nirmal-purja-avalanche-broad-peak.png
 - pakistan-west-indies-test-series-drawn.png
-- cli.png (homepage "What We Cover" tile)
+- cli.png (homepage "What We Cover" tile: Celebrity)
+- news.png (homepage "What We Cover" tile: Business)
+- sport.png (homepage "What We Cover" tile: Sport)
+- trending.png (homepage "What We Cover" tile: World)
 - premier-league-2026-27-season-preview.png
 - spider-man-brand-new-day-record.png
 - spacex-nvidia-exclusive-partnership.png
