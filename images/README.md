@@ -11,6 +11,10 @@ instead of broken/blank images.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
+- iran-us-ceasefire-expires-trump-threatens-oman-hormuz.svg
+- princess-eugenie-reveals-daughter-adelaide-name-portugal.svg
+- magnus-carlsen-esports-world-cup-2026-chess-title-defense.svg
+- openai-launches-chatgpt-for-teens-parental-controls.svg
 - 155million.png
 - benny.png
 - candida-auris-fungus-outbreak.png
