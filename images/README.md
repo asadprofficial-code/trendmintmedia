@@ -11,6 +11,10 @@ instead of broken/blank images.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
+- uae-suspends-trade-iran-missile-attack-strait-hormuz.svg
+- moderna-merck-melanoma-vaccine-phase3-trial-shares-surge.svg
+- tupac-shakur-murder-trial-duane-keffe-d-davis-testimony.svg
+- marilyn-monroe-barbie-100th-birthday-doll.svg
 - iran-us-ceasefire-expires-trump-threatens-oman-hormuz.svg
 - princess-eugenie-reveals-daughter-adelaide-name-portugal.svg
 - magnus-carlsen-esports-world-cup-2026-chess-title-defense.svg
