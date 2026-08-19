@@ -15,10 +15,6 @@ instead of broken/blank images.
 - moderna-merck-melanoma-vaccine-phase3-trial-shares-surge.svg
 - tupac-shakur-murder-trial-duane-keffe-d-davis-testimony.svg
 - marilyn-monroe-barbie-100th-birthday-doll.svg
-- iran-us-ceasefire-expires-trump-threatens-oman-hormuz.svg
-- princess-eugenie-reveals-daughter-adelaide-name-portugal.svg
-- magnus-carlsen-esports-world-cup-2026-chess-title-defense.svg
-- openai-launches-chatgpt-for-teens-parental-controls.svg
 - 155million.png
 - benny.png
 - candida-auris-fungus-outbreak.png
@@ -76,6 +72,10 @@ Already present (added):
 - liam-payne-investigation-documents.png
 - san-francisco-rent-ai-boom.png
 - oil-prices-strait-of-hormuz-deadlock.png
+- iran-us-ceasefire-expires-trump-threatens-oman-hormuz.webp
+- princess-eugenie-reveals-daughter-adelaide-name-portugal.webp
+- magnus-carlsen-esports-world-cup-2026-chess-title-defense.webp
+- openai-launches-chatgpt-for-teens-parental-controls.webp
 
 Tip: `this.style.opacity='0'` (`onerror` handler) on `<img>` tags means a
 missing image silently disappears instead of showing a broken-image icon —
