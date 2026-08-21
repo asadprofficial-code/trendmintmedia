@@ -11,10 +11,6 @@ instead of broken/blank images.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
-- anthropic-ipo-record-spacex-october-2026.svg
-- nevada-approves-8000-robotaxis-las-vegas.svg
-- trump-iran-economic-isolation-new-phase.svg
-- freedom-250-grand-prix-national-mall.svg
 - uae-suspends-trade-iran-missile-attack-strait-hormuz.svg
 - moderna-merck-melanoma-vaccine-phase3-trial-shares-surge.svg
 - tupac-shakur-murder-trial-duane-keffe-d-davis-testimony.svg
@@ -80,6 +76,10 @@ Already present (added):
 - princess-eugenie-reveals-daughter-adelaide-name-portugal.webp
 - magnus-carlsen-esports-world-cup-2026-chess-title-defense.webp
 - openai-launches-chatgpt-for-teens-parental-controls.webp
+- anthropic-ipo-record-spacex-october-2026.svg (original illustrative graphic)
+- nevada-approves-8000-robotaxis-las-vegas.svg (original illustrative graphic)
+- trump-iran-economic-isolation-new-phase.svg (original illustrative graphic)
+- freedom-250-grand-prix-national-mall.svg (original illustrative graphic)
 
 Tip: `this.style.opacity='0'` (`onerror` handler) on `<img>` tags means a
 missing image silently disappears instead of showing a broken-image icon —
