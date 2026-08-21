@@ -11,6 +11,10 @@ instead of broken/blank images.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
+- anthropic-ipo-record-spacex-october-2026.svg
+- nevada-approves-8000-robotaxis-las-vegas.svg
+- trump-iran-economic-isolation-new-phase.svg
+- freedom-250-grand-prix-national-mall.svg
 - uae-suspends-trade-iran-missile-attack-strait-hormuz.svg
 - moderna-merck-melanoma-vaccine-phase3-trial-shares-surge.svg
 - tupac-shakur-murder-trial-duane-keffe-d-davis-testimony.svg
