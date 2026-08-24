@@ -11,6 +11,10 @@ instead of broken/blank images.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
+- hawk-fire-reno-nevada-evacuation.svg
+- us-canada-tariff-war-2026.svg
+- texas-data-center-moratorium-grid-audit.svg
+- alex-jones-sandy-hook-judgment-reduced.svg
 - tropical-storm-moke-hawaii-flooding.svg
 - alpha-gal-syndrome-tick-meat-allergy.svg
 - viral-cash-drop-trend-hidden-money.svg
