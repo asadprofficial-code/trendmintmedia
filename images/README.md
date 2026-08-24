@@ -11,6 +11,10 @@ instead of broken/blank images.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
+- tropical-storm-moke-hawaii-flooding.svg
+- alpha-gal-syndrome-tick-meat-allergy.svg
+- viral-cash-drop-trend-hidden-money.svg
+- freedom-250-grand-prix-recap-national-mall.svg
 - anthropic-ipo-record-spacex-october-2026.svg
 - nevada-approves-8000-robotaxis-las-vegas.svg
 - trump-iran-economic-isolation-new-phase.svg
