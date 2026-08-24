@@ -1,5 +1,87 @@
 [
   {
+    "slug": "hawk-fire-reno-nevada-evacuation-90000",
+    "cat": "World",
+    "title": "Hawk Fire Forces Nearly 90,000 To Evacuate As Wildfire Reaches The Outskirts Of Reno",
+    "excerpt": "A fast-moving, human-caused wildfire has burned more than 15,000 acres and remains at zero percent containment, pushing Nevada's governor to declare a state of emergency as flames threaten Reno's northern neighborhoods.",
+    "img": "/images/hawk-fire-reno-nevada-evacuation.svg",
+    "read": "5 min read",
+    "date": "Aug 24, 2026",
+    "publishedAt": "2026-08-24T08:00:00Z",
+    "body": [
+      "A fast-moving, human-caused wildfire has pushed nearly 90,000 residents of Reno, Nevada, out of their homes or onto standby to evacuate, as flames spread rapidly through the dry foothills northwest of the city and began threatening residential neighborhoods on the urban edge of one of the West's fastest-growing metropolitan areas. The blaze, known as the Hawk Fire, has already burned more than 15,000 acres, remains at zero percent containment, and has forced Nevada's governor to declare a state of emergency.",
+      "<strong>How The Fire Started And Spread</strong>",
+      "The Hawk Fire was first reported late Saturday morning near Hawk Meadow Trail, in the hills northwest of Reno. Officials confirmed the fire was human-caused, though the specific circumstances remain under investigation. Fueled by gusty winds, low humidity and vegetation left tinder-dry by the region's summer conditions, the blaze exploded in size, consuming more than 15,000 acres within 24 hours and pushing directly toward Reno's urban core, an area home to tens of thousands of residents and the University of Nevada, Reno campus.",
+      "<strong>Scale Of The Evacuations</strong>",
+      "Approximately 42,000 residents were placed under mandatory \"go now\" evacuation orders, while an additional 45,000 were placed under evacuation warnings — combined, roughly a third of Reno's total population of about 280,000. Officials confirmed roughly 13,700 homes fell within the evacuation area, and at least two emergency shelters were opened. Reno Mayor Hillary Schieve issued an urgent appeal to residents still hesitant to leave, warning that structures within the fire's path had already burned and stressing that personal safety should take precedence over protecting property.",
+      "At least six people have been injured, including three civilians and three emergency responders. Nevada Governor Joe Lombardo declared a state of emergency for Washoe County and mobilized the National Guard, activating helicopter crews for aerial firefighting and assigning roughly 60 personnel to support law enforcement in evacuated neighborhoods.",
+      "<strong>Impact On Daily Life</strong>",
+      "All Washoe County School District schools closed Monday except one, and portions of U.S. Route 395, a critical regional highway, were shut down due to fire activity. The disruption hit at a particularly awkward moment for the University of Nevada, Reno, where many students had only just moved into campus housing ahead of the fall semester. Meteorologists point to gusty, shifting winds combined with low humidity and dry vegetation as the primary drivers behind the fire's rapid and unpredictable growth, conditions complicated further by the steep terrain surrounding Peavine Peak.",
+      "Fire scientists describe the blaze as a textbook wildland-urban interface fire — one where minimal buffer between dry hillsides and residential development lets flames and wind-carried embers reach neighborhoods quickly. With containment still at zero percent, officials have urged residents in warning zones to keep evacuation bags packed and stay alert, while crews from across Nevada and neighboring states work around the clock to establish firm containment lines before the next shift in wind conditions."
+    ]
+  },
+  {
+    "slug": "us-canada-tariff-war-50-percent-wine-furniture-hockey",
+    "cat": "Business",
+    "title": "US-Canada Trade War Escalates As 50% Tariffs Take Effect On Wine, Furniture And Hockey Sticks",
+    "excerpt": "The United States has imposed sweeping 50 percent tariffs on roughly $20 billion of Canadian goods after last-minute talks collapsed, prompting Prime Minister Mark Carney to vow matching retaliation.",
+    "img": "/images/us-canada-tariff-war-2026.svg",
+    "read": "5 min read",
+    "date": "Aug 24, 2026",
+    "publishedAt": "2026-08-24T10:00:00Z",
+    "body": [
+      "A trade relationship that has stood as one of the closest and most economically integrated in the world is now in open conflict. Just after midnight Saturday, the United States imposed sweeping 50 percent tariffs on roughly $20 billion worth of Canadian goods, ranging from wine and whisky to furniture, hockey equipment and dairy products, after last-minute negotiations between Washington and Ottawa collapsed. Canadian Prime Minister Mark Carney responded within hours, vowing to match the tariffs dollar for dollar.",
+      "<strong>From Near-Deal To Total Collapse</strong>",
+      "The standoff traces back to July 20, when President Trump signed three proclamations invoking Section 338 of the Tariff Act of 1930, a rarely used century-old provision allowing tariffs of up to 50 percent on goods from a country found to be discriminating against U.S. commerce. The proclamations targeted Canadian motor vehicles, dairy products and alcoholic beverages, but their coverage eventually expanded to more than 400 product lines including furniture, cement, clothing and ice hockey equipment. A further round of talks between U.S. Trade Representative Jamieson Greer and Canada's Dominic LeBlanc broke down entirely, with each side blaming the other, and the tariffs took effect as scheduled at 12:01 a.m. Eastern time Saturday.",
+      "<strong>What's Actually Being Taxed</strong>",
+      "The product list spans three separate proclamations: alcoholic beverages including Crown Royal whisky, dairy products, and Canadian-manufactured automobiles, plus a broader list covering furniture, wooden kitchenware, paper products, clothing, fishing rods, cement and hockey sticks. Because the tariffs were imposed under Section 338 rather than conventional trade remedy statutes, the goods don't qualify for preferential treatment under the U.S.-Mexico-Canada Agreement, meaning even products that would normally move duty-free across the border are now fully exposed to the 50 percent rate.",
+      "<strong>Canada's Response And Broader Strategy</strong>",
+      "Carney pledged retaliatory tariffs matching the American measures dollar for dollar, though Ottawa had not yet published a specific target list. Beyond retaliation, Carney's government has emphasized reducing Canada's economic dependence on the U.S. market, pointing to its network of free-trade agreements covering roughly 1.5 billion consumers and nearly 500 billion Canadian dollars in domestic infrastructure investment. Canadian trade data shows exports to the U.S. already declined 3.7 percent over the past year even as exports to other markets rose 11.1 percent.",
+      "In dollar terms, the $20 billion in affected goods represents just over 5 percent of Canada's total exports to the U.S. — economists have generally characterized the move as more of a pressure tactic than an economy-altering shock, though the impact on producers in the directly affected sectors is far more immediate. With both governments now publicly entrenched, trade analysts caution that without a clear diplomatic off-ramp, the standoff could extend well beyond this initial round of tariffs and countermeasures."
+    ]
+  },
+  {
+    "slug": "texas-data-center-moratorium-grid-audit-abbott",
+    "cat": "Business",
+    "title": "Texas Hits The Brakes On Data Centers As Governor Orders Statewide Grid Audit",
+    "excerpt": "Governor Greg Abbott has ordered a sweeping audit of every data center seeking to connect to Texas's power grid, effectively freezing new approvals and putting nearly 20 percent of the US data center pipeline at risk of delay.",
+    "img": "/images/texas-data-center-moratorium-grid-audit.svg",
+    "read": "5 min read",
+    "date": "Aug 24, 2026",
+    "publishedAt": "2026-08-24T12:00:00Z",
+    "body": [
+      "Texas, long celebrated by developers as one of the friendliest states in America for building data centers, has abruptly changed course. Governor Greg Abbott has ordered a sweeping audit of every data center seeking to connect to the state's electricity grid, effectively freezing new project approvals until regulators complete a comprehensive review — a move that puts nearly 20 percent of the entire U.S. data center development pipeline at risk of delay.",
+      "<strong>An Industry Built On Cheap Power</strong>",
+      "Texas's deregulated electricity market and business-friendly regulatory environment made it the country's second-largest data center market, trailing only Virginia. But that growth strained the grid: the Electric Reliability Council of Texas was facing interconnection requests totaling roughly 474 gigawatts of proposed new demand, with data centers accounting for about 90 percent of it — several times the state's current peak electricity demand record.",
+      "<strong>The Governor's Directive</strong>",
+      "Abbott instructed the Public Utility Commission of Texas and ERCOT to audit data centers seeking grid connections, requiring applicants to disclose whether facilities plan to generate their own power, how much water they intend to consume for cooling, what tax incentives they've received, and what measures they'll take to reduce impact on surrounding communities. Any project that fails to comply will be denied grid connection entirely. ERCOT confirmed it would postpone a key transmission planning process, known as the Batch Zero study, while implementing the directive.",
+      "<strong>A Political Flashpoint In An Election Year</strong>",
+      "The timing is impossible to separate from politics: Abbott faces a closer-than-expected re-election race against Democratic state representative Gina Hinojosa, who has called the audit an insufficient half-measure and pushed for a full moratorium. Criticism has come from unexpected corners too, with Republican Agriculture Commissioner Sid Miller dismissing the directive as functionally meaningless without legislative action. The move follows months of local opposition — Austin County implemented its own moratorium on AI-focused data centers, while El Paso adopted a 300-foot buffer requirement between facilities and residential neighborhoods.",
+      "Industry analysts estimate the pause places roughly 49.8 gigawatts of planned capacity at risk of delay, with potential revenue losses reaching as high as $8 billion by early 2027 if AI infrastructure investment shifts elsewhere. Texas follows a similar move by New York, which halted new data center approvals for up to a year, part of a broader wave of legislative activity nationwide as states grapple with balancing economic development against strained electrical grids and water resources. With no fixed timeline for when the audit will conclude, meaningful, lasting change is widely expected to require action from the Texas Legislature, which convenes only once every two years."
+    ]
+  },
+  {
+    "slug": "alex-jones-sandy-hook-judgment-reduced-appeals-court",
+    "cat": "Politics",
+    "title": "Court Slashes Alex Jones's $50 Million Sandy Hook Judgment To About $6 Million",
+    "excerpt": "A Texas appeals court has cut a jury-awarded judgment against Infowars founder Alex Jones from nearly $50 million to roughly $6 million, while leaving intact the underlying finding that he defamed Sandy Hook victims' parents.",
+    "img": "/images/alex-jones-sandy-hook-judgment-reduced.svg",
+    "read": "5 min read",
+    "date": "Aug 24, 2026",
+    "publishedAt": "2026-08-24T14:00:00Z",
+    "body": [
+      "A Texas appeals court has dramatically reduced the amount conspiracy theorist and Infowars founder Alex Jones must pay to the parents of a child killed in the 2012 Sandy Hook Elementary School massacre, cutting a jury-awarded judgment of nearly $50 million down to roughly $6 million. The ruling, issued Friday by the Texas Third Court of Appeals, leaves intact the underlying finding that Jones defamed the grieving parents by falsely claiming the shooting was a government-orchestrated hoax.",
+      "<strong>The Original Verdict</strong>",
+      "The case traces back to a 2022 jury trial in Austin brought by Neil Heslin and Scarlett Lewis, parents of six-year-old Jesse Lewis, one of 20 children and six educators killed at Sandy Hook. Jones was forced to concede under oath that the shooting was real, but the trial proceeded to determine damages for years of harassment his conspiracy claims caused the family. The jury awarded roughly $49.3 million combined — about $4.1 million in compensatory damages and more than $45 million in punitive damages.",
+      "<strong>Why The Appeals Court Cut The Judgment</strong>",
+      "The appeals court left the $4.1 million compensatory award fully intact, focusing instead on the far larger punitive damages, which it found violated a Texas statutory cap limiting punitive damages to $750,000 per plaintiff in most civil cases. In a unanimous opinion, Chief Justice Darlene Byrne's panel found the trial court had improperly allowed Heslin and Lewis to seek damages exceeding that cap after the 2022 trial had already concluded, and that the evidence didn't meet the narrow threshold needed to invoke an exception. The court modified punitive damages down to exactly $750,000 per plaintiff, a combined reduction of more than $45 million.",
+      "Jones celebrated the ruling as a win for free speech and said his legal team intends to appeal further to the Texas Supreme Court in hopes of eliminating the remaining damages entirely.",
+      "<strong>The Much Larger Connecticut Judgment Remains Untouched</strong>",
+      "Friday's ruling has no bearing on a separate, dramatically larger judgment issued against Jones in Connecticut, where relatives of eight additional Sandy Hook victims won a judgment totaling roughly $1.25 billion — one of the largest defamation judgments in American legal history. Facing that combined weight, Jones's company, Free Speech Systems, filed for bankruptcy, a process that produced a bankruptcy-court auction of its assets won by satirical outlet The Onion in 2024, later overturned by a federal judge citing procedural problems.",
+      "Despite judgments now totaling well over a billion dollars across both cases, the Sandy Hook families have yet to collect any meaningful portion of the money owed to them, with Jones's extended appeals repeatedly delaying any actual transfer of funds even as courts have consistently upheld that his conduct caused genuine harm."
+    ]
+  },
+  {
     "slug": "tropical-storm-moke-hawaii-flooding-hurricane-lala",
     "cat": "World",
     "title": "Tropical Storm Moke Threatens Renewed Flooding In Hawaii Just Days After Deadly Hurricane Lala",
