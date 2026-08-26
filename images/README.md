@@ -11,6 +11,10 @@ instead of broken/blank images.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
+- target-halloween-costume-pulled-racist-backlash.svg
+- dangerous-wrong-way-driving-trend-uk-ireland.svg
+- federal-judge-strikes-down-visa-ban-75-countries.svg
+- washington-post-reinstates-karen-attiah.svg
 - hawk-fire-reno-nevada-evacuation.svg
 - us-canada-tariff-war-2026.svg
 - texas-data-center-moratorium-grid-audit.svg
