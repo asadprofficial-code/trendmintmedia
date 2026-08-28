@@ -3,63 +3,47 @@
 This folder is where article and homepage cover images belong (referenced as
 `/images/<filename>` throughout `index.html` and `articles/data.json`).
 
-None of these image files exist in the repository yet — they need to be added
-here (matching filenames exactly) before the site will show real photos
-instead of broken/blank images.
+Every image currently referenced by `index.html` and `articles/data.json`
+exists in this folder. When adding a new article, give it an `img` path
+under `/images/` and add a matching file here in the same commit — otherwise
+the cover silently disappears on the live site (see the `onerror` note
+below).
 
-## Referenced by index.html ("What We Cover" tiles)
-(all 4 now present — see below)
+## Placeholder covers
 
-## Referenced by articles/data.json (article cover images)
-- dolly-parton-dead-at-80-tributes-legacy.svg
-- target-halloween-costume-pulled-racist-backlash.svg
-- dangerous-wrong-way-driving-trend-uk-ireland.svg
-- federal-judge-strikes-down-visa-ban-75-countries.svg
-- washington-post-reinstates-karen-attiah.svg
-- hawk-fire-reno-nevada-evacuation.svg
-- us-canada-tariff-war-2026.svg
-- texas-data-center-moratorium-grid-audit.svg
-- alex-jones-sandy-hook-judgment-reduced.svg
-- tropical-storm-moke-hawaii-flooding.svg
-- alpha-gal-syndrome-tick-meat-allergy.svg
-- viral-cash-drop-trend-hidden-money.svg
-- freedom-250-grand-prix-recap-national-mall.svg
-- anthropic-ipo-record-spacex-october-2026.svg
-- nevada-approves-8000-robotaxis-las-vegas.svg
-- trump-iran-economic-isolation-new-phase.svg
-- freedom-250-grand-prix-national-mall.svg
-- uae-suspends-trade-iran-missile-attack-strait-hormuz.svg
-- moderna-merck-melanoma-vaccine-phase3-trial-shares-surge.svg
-- tupac-shakur-murder-trial-duane-keffe-d-davis-testimony.svg
-- marilyn-monroe-barbie-100th-birthday-doll.svg
-- 155million.png
-- benny.png
-- candida-auris-fungus-outbreak.png
-- cher-mary-bono-legal-ruling.png
-- death.png
-- election.png
-- fans-defend-celebrity-online.png
-- haitian-tps-protections-end.png
-- iran.png
-- jada.png
-- kris-jenner-robert-kardashian.png
-- liive.png
-- love.png
-- oprah-real-name-orpah.png
-- royal-baby-tradition.png
-- ronaldo.png
-- sabsing-dating-trend.png
-- salad-and-go-closure.png
-- simon.png
-- stewart-rhodes-jan6-dismissed.png
-- the.png
-- trump.png
-- war.png
-- joe-serafini-frankie-rodriguez-engaged.png
-- cristiano-ronaldo-georgina-rodriguez-wedding.png
+Some article covers below are on-brand generated graphics (dark background,
+gold accent, serif headline) rather than real photos — added as an interim
+fix for slugs whose `img` path had no file behind it, which made those
+listing cards render blank. Swap any of these for a real sourced photo at
+any time; just keep the filename identical so `articles/data.json` doesn't
+need to change.
+
+- dolly-parton-dead-at-80-tributes-legacy.png
+- target-halloween-costume-pulled-racist-backlash.png
+- dangerous-wrong-way-driving-trend-uk-ireland.png (file: dangerous-wrong-way-driving-social-media-trend-uk-ireland.png)
+- federal-judge-strikes-down-visa-ban-75-countries.png (file: federal-judge-strikes-down-trump-visa-ban-75-countries.png)
+- washington-post-reinstates-karen-attiah.png (file: washington-post-reinstates-karen-attiah-arbitration.png)
+- hawk-fire-reno-nevada-evacuation.png (file: hawk-fire-reno-nevada-evacuation-90000.png)
+- us-canada-tariff-war-50-percent-wine-furniture-hockey.png
+- texas-data-center-moratorium-grid-audit-abbott.png
+- alex-jones-sandy-hook-judgment-reduced-appeals-court.png
+- tropical-storm-moke-hawaii-flooding-hurricane-lala.png
+- alpha-gal-syndrome-tick-bite-meat-allergy-surge-2026.png
+- viral-cash-drop-trend-hidden-money-tiktok-2026.png
+- freedom-250-grand-prix-recap-record-crowds-national-mall.png
+- anthropic-ipo-record-spacex-october-2026.png
+- nevada-approves-8000-robotaxis-las-vegas-tesla-uber-waymo.png
+- trump-iran-economic-isolation-new-phase-vance-bessent.png
+- freedom-250-grand-prix-indycar-national-mall-washington.png
+- uae-suspends-trade-iran-missile-attack-strait-hormuz.png
+- moderna-merck-melanoma-vaccine-phase3-trial-shares-surge.png
+- tupac-shakur-murder-trial-duane-keffe-d-davis-testimony.png
+- marilyn-monroe-barbie-100th-birthday-doll.png
 - belgium-high-fens-wildfire-2026.png
+- cristiano-ronaldo-georgina-rodriguez-wedding.png
 
-Already present (added):
+## Real photos already present
+
 - clueless-cast-reboot-2026.jpg
 - death-investigator-rigor-mortis.jpg
 - kim-kardashian-lewis-hamilton-halo.jpg
