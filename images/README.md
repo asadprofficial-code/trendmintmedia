@@ -11,6 +11,7 @@ instead of broken/blank images.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
+- dolly-parton-dead-at-80-tributes-legacy.svg
 - target-halloween-costume-pulled-racist-backlash.svg
 - dangerous-wrong-way-driving-trend-uk-ireland.svg
 - federal-judge-strikes-down-visa-ban-75-countries.svg
