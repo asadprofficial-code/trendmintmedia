@@ -24,6 +24,10 @@ yourself too if you want both hosts in sync.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
+- nepal-china-border-flood-disaster-missing-search.jpg
+- milo-yiannopoulos-arrested-ice-deportation.jpg
+- trump-mail-in-voting-order-injunction-lifted-midterms.jpg
+- nvidia-earnings-beat-ai-boom-wall-street-rally.jpg
 - dolly-parton-dead-at-80-tributes-legacy.png
 - target-halloween-costume-pulled-racist-backlash.png
 - dangerous-wrong-way-driving-trend-uk-ireland.png
