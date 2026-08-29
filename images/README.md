@@ -7,31 +7,44 @@ None of these image files exist in the repository yet — they need to be added
 here (matching filenames exactly) before the site will show real photos
 instead of broken/blank images.
 
+## Deploy note (Hostinger)
+
+`images/**` is excluded in `.github/workflows/deploy-hostinger.yml`. The
+Hostinger FTP deploy action mirrors the repo to the server and deletes
+anything on the server that isn't in the repo — without this exclude, any
+image uploaded manually via FTP/hosting file manager (not committed to git)
+would get wiped on the next push to `main`. With the exclude in place, this
+folder on the live Hostinger site is managed entirely by hand via
+FTP/file manager; pushes never touch it (add, overwrite, or delete). Images
+committed here still deploy fine to GitHub Pages (`pages.yml` uploads the
+whole repo with no exclude), just not to Hostinger — upload them there
+yourself too if you want both hosts in sync.
+
 ## Referenced by index.html ("What We Cover" tiles)
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
-- dolly-parton-dead-at-80-tributes-legacy.svg
-- target-halloween-costume-pulled-racist-backlash.svg
-- dangerous-wrong-way-driving-trend-uk-ireland.svg
-- federal-judge-strikes-down-visa-ban-75-countries.svg
-- washington-post-reinstates-karen-attiah.svg
-- hawk-fire-reno-nevada-evacuation.svg
-- us-canada-tariff-war-2026.svg
-- texas-data-center-moratorium-grid-audit.svg
-- alex-jones-sandy-hook-judgment-reduced.svg
-- tropical-storm-moke-hawaii-flooding.svg
-- alpha-gal-syndrome-tick-meat-allergy.svg
-- viral-cash-drop-trend-hidden-money.svg
-- freedom-250-grand-prix-recap-national-mall.svg
-- anthropic-ipo-record-spacex-october-2026.svg
-- nevada-approves-8000-robotaxis-las-vegas.svg
-- trump-iran-economic-isolation-new-phase.svg
-- freedom-250-grand-prix-national-mall.svg
-- uae-suspends-trade-iran-missile-attack-strait-hormuz.svg
-- moderna-merck-melanoma-vaccine-phase3-trial-shares-surge.svg
-- tupac-shakur-murder-trial-duane-keffe-d-davis-testimony.svg
-- marilyn-monroe-barbie-100th-birthday-doll.svg
+- dolly-parton-dead-at-80-tributes-legacy.png
+- target-halloween-costume-pulled-racist-backlash.png
+- dangerous-wrong-way-driving-trend-uk-ireland.png
+- federal-judge-strikes-down-visa-ban-75-countries.png
+- washington-post-reinstates-karen-attiah.png
+- hawk-fire-reno-nevada-evacuation.png
+- us-canada-tariff-war-2026.png
+- texas-data-center-moratorium-grid-audit.png
+- alex-jones-sandy-hook-judgment-reduced.png
+- tropical-storm-moke-hawaii-flooding.png
+- alpha-gal-syndrome-tick-meat-allergy.png
+- viral-cash-drop-trend-hidden-money.png
+- freedom-250-grand-prix-recap-national-mall.png
+- anthropic-ipo-record-spacex-october-2026.png
+- nevada-approves-8000-robotaxis-las-vegas.png
+- trump-iran-economic-isolation-new-phase.png
+- freedom-250-grand-prix-national-mall.png
+- uae-suspends-trade-iran-missile-attack-strait-hormuz.png
+- moderna-merck-melanoma-vaccine-phase3-trial-shares-surge.png
+- tupac-shakur-murder-trial-duane-keffe-d-davis-testimony.png
+- marilyn-monroe-barbie-100th-birthday-doll.png
 - 155million.png
 - benny.png
 - candida-auris-fungus-outbreak.png
