@@ -25,9 +25,7 @@ yourself too if you want both hosts in sync.
 
 ## Referenced by articles/data.json (article cover images)
 - nepal-china-border-flood-disaster-missing-search.jpg
-- milo-yiannopoulos-arrested-ice-deportation.jpg
 - trump-mail-in-voting-order-injunction-lifted-midterms.jpg
-- nvidia-earnings-beat-ai-boom-wall-street-rally.jpg
 - dolly-parton-dead-at-80-tributes-legacy.png
 - target-halloween-costume-pulled-racist-backlash.png
 - dangerous-wrong-way-driving-trend-uk-ireland.png
@@ -110,6 +108,8 @@ Already present (added):
 - princess-eugenie-reveals-daughter-adelaide-name-portugal.webp
 - magnus-carlsen-esports-world-cup-2026-chess-title-defense.webp
 - openai-launches-chatgpt-for-teens-parental-controls.webp
+- milo-yiannopoulos-arrested-ice-deportation.png
+- nvidia-earnings-beat-ai-boom-wall-street-rally.png
 
 Tip: `this.style.opacity='0'` (`onerror` handler) on `<img>` tags means a
 missing image silently disappears instead of showing a broken-image icon —
