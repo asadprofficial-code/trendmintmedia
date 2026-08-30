@@ -91,6 +91,7 @@ Already present (added):
 - news.png (homepage "What We Cover" tile: Business)
 - sport.png (homepage "What We Cover" tile: Sport)
 - trending.png (homepage "What We Cover" tile: World)
+- homepage-og-cover.png (homepage social share preview — og:image / twitter:image in index.html `<head>`)
 - premier-league-2026-27-season-preview.png
 - spider-man-brand-new-day-record.png
 - spacex-nvidia-exclusive-partnership.png
