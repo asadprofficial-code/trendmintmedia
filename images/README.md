@@ -24,12 +24,6 @@ yourself too if you want both hosts in sync.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
-- nepal-china-border-flood-disaster-missing-search.jpg
-- trump-mail-in-voting-order-injunction-lifted-midterms.jpg
-- dolly-parton-dead-at-80-tributes-legacy.png
-- target-halloween-costume-pulled-racist-backlash.png
-- dangerous-wrong-way-driving-trend-uk-ireland.png
-- federal-judge-strikes-down-visa-ban-75-countries.png
 - washington-post-reinstates-karen-attiah.png
 - hawk-fire-reno-nevada-evacuation.png
 - us-canada-tariff-war-2026.png
@@ -110,6 +104,12 @@ Already present (added):
 - openai-launches-chatgpt-for-teens-parental-controls.webp
 - milo-yiannopoulos-arrested-ice-deportation.png
 - nvidia-earnings-beat-ai-boom-wall-street-rally.png
+- nepal-china-border-flood-disaster-missing-search.png
+- trump-mail-in-voting-order-injunction-lifted-midterms.png
+- dolly-parton-dead-at-80-tributes-legacy.png
+- target-halloween-costume-pulled-racist-backlash.png
+- dangerous-wrong-way-driving-trend-uk-ireland.png
+- federal-judge-strikes-down-visa-ban-75-countries.png
 
 Tip: `this.style.opacity='0'` (`onerror` handler) on `<img>` tags means a
 missing image silently disappears instead of showing a broken-image icon —
