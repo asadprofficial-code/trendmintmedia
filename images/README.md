@@ -24,10 +24,6 @@ yourself too if you want both hosts in sync.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
-- ferry-capsizes-northern-cyprus-passengers-rescue.png
-- pakistan-england-lords-test-day-three-series-on-line.png
-- gta-6-extended-look-netflix-blockbuster-demand.png
-- grand-ole-opry-dolly-parton-tribute-show-nashville.png
 - washington-post-reinstates-karen-attiah.png
 - hawk-fire-reno-nevada-evacuation.png
 - us-canada-tariff-war-2026.png
@@ -73,6 +69,10 @@ yourself too if you want both hosts in sync.
 - belgium-high-fens-wildfire-2026.png
 
 Already present (added):
+- ferry-capsizes-northern-cyprus-passengers-rescue.png
+- pakistan-england-lords-test-day-three-series-on-line.png
+- gta-6-extended-look-netflix-blockbuster-demand.png
+- grand-ole-opry-dolly-parton-tribute-show-nashville.png
 - clueless-cast-reboot-2026.jpg
 - death-investigator-rigor-mortis.jpg
 - kim-kardashian-lewis-hamilton-halo.jpg
