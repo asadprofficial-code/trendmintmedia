@@ -24,10 +24,6 @@ yourself too if you want both hosts in sync.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
-- us-strikes-iranian-rocket-launchers-strait-hormuz.png
-- oil-surges-stocks-fall-us-iran-hormuz-strikes.png
-- jd-vance-maga-inc-michigan-rally-midterms.png
-- djokovic-shock-first-round-exit-us-open.png
 - washington-post-reinstates-karen-attiah.png
 - hawk-fire-reno-nevada-evacuation.png
 - us-canada-tariff-war-2026.png
@@ -73,6 +69,10 @@ yourself too if you want both hosts in sync.
 - belgium-high-fens-wildfire-2026.png
 
 Already present (added):
+- us-strikes-iranian-rocket-launchers-strait-hormuz.png
+- oil-surges-stocks-fall-us-iran-hormuz-strikes.png
+- jd-vance-maga-inc-michigan-rally-midterms.png
+- djokovic-shock-first-round-exit-us-open.png
 - ferry-capsizes-northern-cyprus-passengers-rescue.png
 - pakistan-england-lords-test-day-three-series-on-line.png
 - gta-6-extended-look-netflix-blockbuster-demand.png
