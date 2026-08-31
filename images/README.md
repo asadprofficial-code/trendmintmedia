@@ -24,6 +24,10 @@ yourself too if you want both hosts in sync.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
+- us-strikes-iranian-rocket-launchers-strait-hormuz.png
+- oil-surges-stocks-fall-us-iran-hormuz-strikes.png
+- jd-vance-maga-inc-michigan-rally-midterms.png
+- djokovic-shock-first-round-exit-us-open.png
 - washington-post-reinstates-karen-attiah.png
 - hawk-fire-reno-nevada-evacuation.png
 - us-canada-tariff-war-2026.png
