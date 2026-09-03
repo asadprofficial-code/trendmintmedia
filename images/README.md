@@ -69,6 +69,10 @@ yourself too if you want both hosts in sync.
 - belgium-high-fens-wildfire-2026.png
 
 Already present (added):
+- russia-kyiv-sixth-night-strikes-12-dead-2026.png
+- apple-iphone-18-pro-foldable-event-september-9-2026.png
+- kakapo-population-milestone-325-new-zealand-2026.png
+- massachusetts-senate-primary-markey-wins-moulton.png
 - us-strikes-iranian-rocket-launchers-strait-hormuz.png
 - oil-surges-stocks-fall-us-iran-hormuz-strikes.png
 - jd-vance-maga-inc-michigan-rally-midterms.png
