@@ -24,6 +24,10 @@ yourself too if you want both hosts in sync.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
+- canada-retaliatory-tariffs-take-effect-2026.png
+- ai-job-disruption-future-proof-careers-2026.png
+- ohio-governor-candidate-amy-acton-attacked-2026.png
+- us-open-tiafoe-michelsen-quarterfinals-2026.png
 - washington-post-reinstates-karen-attiah.png
 - hawk-fire-reno-nevada-evacuation.png
 - us-canada-tariff-war-2026.png
