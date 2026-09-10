@@ -24,6 +24,10 @@ yourself too if you want both hosts in sync.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
+- anthropic-researcher-ai-extinction-risk-warning-2026.png
+- trump-500-obamaca-rebate-checks-midterms-2026.png
+- apple-iphone-duo-foldable-launch-ternus-2026.png
+- nfl-season-opener-seahawks-beat-patriots-2026.png
 - washington-post-reinstates-karen-attiah.png
 - hawk-fire-reno-nevada-evacuation.png
 - us-canada-tariff-war-2026.png
