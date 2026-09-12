@@ -24,6 +24,10 @@ yourself too if you want both hosts in sync.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
+- brics-summit-new-delhi-modi-putin-xi-2026.png
+- trump-ireland-visit-doonbeg-golf-unified-ireland-2026.png
+- miami-hurricanes-77-7-blowout-famu-mercy-rule-2026.png
+- houthis-red-sea-shipping-threat-escalation-2026.png
 - anthropic-researcher-ai-extinction-risk-warning-2026.png
 - trump-500-obamaca-rebate-checks-midterms-2026.png
 - apple-iphone-duo-foldable-launch-ternus-2026.png
