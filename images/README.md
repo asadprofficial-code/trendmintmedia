@@ -24,6 +24,10 @@ yourself too if you want both hosts in sync.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
+- russia-ukraine-power-grid-strikes-refinery-2026.png
+- malaysia-pm-sings-brics-gala-xi-skips-dinner-2026.png
+- brent-crude-surges-above-105-iran-war-2026.png
+- nfl-week-1-sunday-slate-storylines-2026.png
 - brics-summit-new-delhi-modi-putin-xi-2026.png
 - trump-ireland-visit-doonbeg-golf-unified-ireland-2026.png
 - miami-hurricanes-77-7-blowout-famu-mercy-rule-2026.png
