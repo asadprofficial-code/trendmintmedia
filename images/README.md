@@ -24,6 +24,10 @@ yourself too if you want both hosts in sync.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
+- un-experts-us-war-crimes-iran-2026.png
+- judge-blocks-trump-kennedy-center-changes-2026.png
+- openai-six-new-ai-incidents-safety-concerns-2026.png
+- kim-kardashian-esophagitis-diagnosis-2026.png
 - indonesia-ferry-capsizes-java-sea-missing-2026.png
 - trump-dismisses-china-satellite-iran-jordan-strike-2026.png
 - wisconsin-congressman-tiffany-plane-lake-landing-2026.png
