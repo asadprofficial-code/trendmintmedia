@@ -24,6 +24,10 @@ yourself too if you want both hosts in sync.
 (all 4 now present — see below)
 
 ## Referenced by articles/data.json (article cover images)
+- trump-denmark-greenland-military-deal-2026.png
+- coast-guard-intercepts-200-migrants-cartel-smuggling-2026.png
+- minnesota-ice-agent-arrested-shooting-venezuelan-man-2026.png
+- macklemore-dropped-ed-sheeran-tour-palestine-2026.png
 - indonesia-ferry-capsizes-java-sea-missing-2026.png
 - trump-dismisses-china-satellite-iran-jordan-strike-2026.png
 - wisconsin-congressman-tiffany-plane-lake-landing-2026.png
